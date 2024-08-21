@@ -4,12 +4,11 @@
 
 Welcome to CSCI-C343 "Data Structures"!
 
-In this lab, we will first go
-through software installation and review basic testing and
-debugging skills. You will then be asked to implement three array
-search algorithms. Finally, you are supposed to create test
-cases for those algorithms and submit both your code and your test
-cases to Autograder.
+In this lab, we will first go through software installation and review
+basic testing and debugging skills. You will then be asked to
+implement three array search algorithms. Finally, you are supposed to
+create test cases for those algorithms and submit both your code and
+your test cases to Autograder.
 
 ### Table of contents:
 
@@ -405,11 +404,11 @@ provide instantaneous feedback to your lab submissions. Your grades will be
 decided by the number of test cases that your _best_ submission passes.
 Multiple attempts are allowed.
 
-- Submit `Search.java` to [link](https://autograder.luddy.indiana.edu/web/project/927)
+- Submit `Search.java` to [link](https://autograder.luddy.indiana.edu/web/project/1323)
   + Autograder will run your submission on 8 test cases that thoroughly
     examine the correctness of all three search functions.
 
-- Submit `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/941)
+- Submit `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/1319)
   + Autograder will run your submission on 8 problematic `Search` implementations.
     It also runs one correct implementation to rule out false positive.
     Your test cases are expected to throw exceptions on all implementations
