@@ -19,12 +19,9 @@ doing better on job interview questions.
 * Section 7280, Mondays and Wednesdays 9:45am-11:00am, Wendell W. Wright Education Building (ED), Room 1084.
 
 
-**Labs and Teaching Assistants**
+**Labs**
 
 * Section 7326, Fridays 10:20am-12:15pm, Ballantine Hall (BH) 241
-
-  - Aaron Olson
-  - Luke Nargang
 
 Expect at least one quiz per month during lab time.
 * 15 minutes, at the end of a lab session
