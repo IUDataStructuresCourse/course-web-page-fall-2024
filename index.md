@@ -99,8 +99,8 @@ Dec. 18 | **Final Exam** 8-10am
 
 **Grade Weighting**
 
-* Assignments (30%)
-* Quizzes (10%)
+* Assignments (35%)
+* Quizzes (5%)
 * Midterm Exam (25%)
 * Final Exam (35%)
 
