@@ -405,10 +405,12 @@ decided by the number of test cases that your _best_ submission passes.
 Multiple attempts are allowed.
 
 - Submit `Search.java` to [link](https://autograder.luddy.indiana.edu/web/project/1323)
+  + You may submit your code up to 3 times.
   + Autograder will run your submission on 8 test cases that thoroughly
     examine the correctness of all three search functions.
 
 - Submit `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/1319)
+  + You may submit your tests an unlimited number of times.
   + Autograder will run your submission on 8 problematic `Search` implementations.
     It also runs one correct implementation to rule out false positive.
     Your test cases are expected to throw exceptions on all implementations
