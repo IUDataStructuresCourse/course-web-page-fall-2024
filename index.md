@@ -64,9 +64,9 @@ Time    | Monday    | Tuesday    | Wednesday    | Thursday    | Friday
 Day     | Lecture Topic                                             | Reading Due  | Assignments and Due Dates | Link
 Aug. 26 | [Introduction](./lectures/introduction.md)                |              |         |
 Aug. 28 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        |         |
-Aug. 30 |                                                           |              | [Lab 1: Array Search and Testing](./lab1) | [code](https://autograder.luddy.indiana.edu/web/project/1323), [test](https://autograder.luddy.indiana.edu/web/project/1319)
+Aug. 30 |                                                           |              | [Lab: Array Search and Testing](./lab1) | [code](https://autograder.luddy.indiana.edu/web/project/1323), [test](https://autograder.luddy.indiana.edu/web/project/1319)
 Sep. 2 | **Labor Day** no class
-Sep. 3 | | | Lab 1 due
+Sep. 3 | | | Lab Array Search due
 Sep. 4 | [Algorithm Analysis](./lectures/algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_uluqvhj2))  | Ch. 2        | 
 Sep. 9 | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_cvtootj1))
        | | | 
