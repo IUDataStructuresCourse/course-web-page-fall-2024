@@ -1,4 +1,4 @@
-# Lab 1: Array Search and Testing
+# Lab: Array Search and Testing
 
 ## Overview
 
