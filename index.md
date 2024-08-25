@@ -1,4 +1,4 @@
-**Indiana University, Spring 2024**
+**Indiana University, Fall 2024**
 
 This course studies the fundamental ideas for efficiently analyzing
 large amounts of data, such as DNA sequence databases and geographic
