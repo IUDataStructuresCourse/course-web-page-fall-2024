@@ -13,28 +13,19 @@
 
 ## Introduce course AI's
 
-* Tianyu Chen (chen512)
-* Chenchao Ding (cd17)
-* Ganesh Arkanath (napoom)
-* Meet Palod (mpalod)
-* Aditya Ramachandra (ar83)
-* Anuj Mahajan (anujmaha)
-* Luke Nargang (lnargang)
 * Aaron Olson (aarolson)
 * Calvin Josenhans (cjosenha)
-* Matthew Hammans (mmhamman)
-* Kyle Li (kyleli)
 
 ## Course web page, syllabus, schedule (due dates, etc.)
 
-    https://iudatastructurescourse.github.io/course-web-page-spring-2024/
+    https://iudatastructurescourse.github.io/course-web-page-fall-2024/
 
 ## Participation:
 
 * Write your name on a "name tent" and place it at the front of your desk
 
 * Slack: ask and answer questions
-  if not on slack, send me email
+
 
 ## Suggested weekly schedule (4 credits * 3 = 12 hours of outside-class work)
 
@@ -83,13 +74,15 @@
 
 * Autograder for submitting assignments
 
+* [Deduce](https://github.com/jsiek/deduce) proof assistant.
+
 * Optional: learn github for managing group work
 
 * ChatGPT/AI: you can use it but beware that if you use it to
   avoid learning, then you are likely to perform poorly on the
   midterm exam and final exam (60% of the course grade).
 
-## Lab 1: Testing Linear Search and Binary Search
+## Lab 1: Linear Search and Binary Search
 
 ## Project 1: Flood It!
 
@@ -97,8 +90,8 @@
 
 ## Appetizer: The Maximum Subsequence Problem
 
-Find the section of the Tecumseh Trail Marathon with the
-greatest net change in altitude. Show TecumsehMarathon.pdf.
+Find the section of the [Tecumseh Trail Marathon](./TecumsehMarathon.pdf) with the
+greatest net change in altitude.
 
 	change:   -25, -100, +100, -25,-75,-125,+100,+100,-25, +75,   -50, -100
 				0     1     2    3   4    5    6    7   8    9   10    11
