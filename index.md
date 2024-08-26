@@ -90,7 +90,7 @@ Dec. 18 | **Final Exam** 8-10am
   * 2022 [with solutions](./final-2022-solns.pdf)
      and [without solutions](./final-2022.pdf).
 
-* [Autograder](https://autograder.luddy.indiana.edu/web/course/77) for submitting coding assignments.
+* [Autograder](https://autograder.luddy.indiana.edu/web/course/127) for submitting coding assignments.
 
 * Code Editor and Debugger:
   [IntelliJ IDEA](https://www.jetbrains.com/idea/download) (Community Edition)
