@@ -91,7 +91,7 @@
 ## Appetizer: The Maximum Subsequence Problem
 
 Find the section of the [Tecumseh Trail Marathon](./TecumsehMarathon.pdf) with the
-greatest net change in altitude.
+greatest net increase in altitude.
 
     change:   -25, -100, +100, -25,-75,-125,+100,+100,-25, +75,   -50, -100
                 0     1     2    3   4    5    6    7   8    9   10    11
