@@ -66,13 +66,12 @@ Day     | Lecture Topic                                             | Reading Du
 Aug. 26 | [Introduction](./lectures/introduction.md)                |              |         |
 Aug. 28 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        |         |
 Aug. 30 |                                                           |              | [Lab: Array Search and Testing](./Search) | [code](https://autograder.luddy.indiana.edu/web/project/1323), [test](https://autograder.luddy.indiana.edu/web/project/1319)
-Sep. 2 | **Labor Day** no class
-Sep. 3 | | | Lab Array Search due
-Sep. 4 | [Algorithm Analysis](./lectures/algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_uluqvhj2))  | Ch. 2        | 
-Sep. 6 |                                                           |              | Lab: Work on [FloodIt! Project](./flood-it) | [code](https://autograder.luddy.indiana.edu/web/project/1302)
-Sep. 9 | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_cvtootj1))
-       | | FloodIt! Project due | 
-Oct. 9 | **Midterm Exam** (in class)
+Sep. 2  | **Labor Day** no class
+Sep. 3  | | | Lab Array Search due
+Sep. 4  | [Algorithm Analysis](./lectures/algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_uluqvhj2))  | Ch. 2        | 
+Sep. 6  |                                                           |              | Lab: Work on [FloodIt! Project](./flood-it) | [code](https://autograder.luddy.indiana.edu/web/project/1302)
+Sep. 9  | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_cvtootj1)) | | FloodIt! Project due | 
+Oct. 9  | **Midterm Exam** (in class)
 Oct. 11 | **Fall Break** no lab                                     |              | 
 Nov.24-Dec.1 | **Thanksgiving Break**
 Dec. 18 | **Final Exam** 8-10am
