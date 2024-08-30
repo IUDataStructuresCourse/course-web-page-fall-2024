@@ -31,18 +31,18 @@ your test cases to Autograder.
     In general, we create a new project for each lab. Sometimes a project code
     skeleton is provided to you; in that case, you can use the "Open" button
     to choose the root directory of that project.
-    ![](assets/images/lab1/welcome.png)
+    ![](assets/images/search/welcome.png)
   - In the pop-up window, enter the title of your lab assignment as "Name".
-    For Lab 1, it should be `Search`.
+    For this lab, it should be `Search`.
   - Choose "Location", which is whatever directory that you prefer to contain
     all lab assignments. (Optional: ) check "Create Git repository" if you would
     like to use version control.
   - Language: "Java"; build systems: "IntelliJ"
   - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu:
-    ![](assets/images/lab1/install_jdk.png)
+    ![](assets/images/search/install_jdk.png)
   - In the pop-up window choose "Vendor" : "Oracle OpenJDK". "Version" should
     be filled in automatically (make sure version ≥15). "Location" can be left as default.
-    ![](assets/images/lab1/jdk_version.png)
+    ![](assets/images/search/jdk_version.png)
   - Click "Download" and wait for the download to finish. In the "New Project"
     window, uncheck "Add sample code" and leave everything else as is. Click "Create".
 
@@ -59,11 +59,12 @@ The code for this demo is available [here](https://github.com/IUDataStructuresCo
 Suppose our tasks are to implement, test and debug the "ripple" approach of array rotation
 (recall [lecture](https://iudatastructurescourse.github.io/course-web-page-spring-2024/lectures/array-rotation.html)).
 We first create an IntelliJ project called "Rotation". The file structure looks like:
-![](assets/images/lab1/mint_proj.png)
+
+![](assets/images/search/mint_proj.png)
 
 To create the Java class file where our implementation code resides, we right click
 on the `src` directory and choose **"Java Class"**:
-![](assets/images/lab1/new_java_class.png)
+![](assets/images/search/new_java_class.png)
 
 We enter "Rotation" as its name. IntelliJ creates a new file `src/Rotation.java` whose
 content is an empty `public class Rotation`. In the editor, we create `rotate_ripple`
@@ -87,7 +88,8 @@ public class Rotation {
 
 Our next task is to create unit tests for `rotate_ripple`. Right click on the root
 directory and select "New -> Directory". Name the new directory `test`.
-![](assets/images/lab1/new_test_dir.png)
+
+![](assets/images/search/new_test_dir.png)
 
 Right click on `test` in the file structure. Go to the last item in the pop-up menu
 and select "Mark Directory As -> Test **Sources** Root". The `test` directory will be
@@ -113,7 +115,8 @@ Careful readers may observe that some of the symbols are marked in red.
 Move cursor to `junit`, where IntelliJ tells me that it cannot resolve the symbol.
 Click on "Add 'JUnit' to classpath" and then "OK". Perform the same action on `jupiter`.
 
-![](assets/images/lab1/add_junit.png)
+![](assets/images/search/add_junit.png)
+
 
 Add the following as a public member function of `RotationTest`:
 
@@ -143,11 +146,11 @@ message that consists of description of the test case and the exception `e`.
 
 We can run this test point by clicking on the green icon:
 
-![](assets/images/lab1/run_test.png)
+![](assets/images/search/run_test.png)
 
 The rotation implementation is correct, so the test case passes:
 
-![](assets/images/lab1/test_success.png)
+![](assets/images/search/test_success.png)
 
 
 We can also generate random numbers to fill the input array:
@@ -175,26 +178,27 @@ public void test_rotation_random() {
 Now that we have multiple test cases, we can select which tests to run
 using the drop-down menu in the top-right corner:
 
-![](assets/images/lab1/choose_config.png)
+![](assets/images/search/choose_config.png)
+
 
 Suppose I made a mistake in the implementation. For example, if I did not assign `tmp2`
 to `tmp1`, it would cause the entire array to be filled with `A[0]` and produce a wrong
 answer. If we remove `tmp1 = tmp2` and rerun the test, it catches the bug by throwing
 an assertion error:
 
-![](assets/images/lab1/test_fail.png)
+![](assets/images/search/test_fail.png)
 
 Now suppose we would like to debug the issue. We start by inspecting the two rotated arrays.
 We can add a breakpoint at `assertArrayEquals(A, B)`. We click on the line number and
 it turns into a red dot. Then we choose "Debug ..." from the drop-down menu:
 
-![](assets/images/lab1/debug.png)
+![](assets/images/search/debug.png)
 
 Execution stops at the breakpoint. Both arrays, `A` and `B`, are displayed in the "Debug"
 section of IntelliJ. We can see that the correct implementation produces `{5, 1, 2, 3, 4}` but
 the buggy implementation produces `{1, 1, 1, 1, 1}` instead:
 
-![](assets/images/lab1/breakpoint.png)
+![](assets/images/search/breakpoint.png)
 
 We can add more breakpoints by repeating the steps above. Breakpoints are controlled
 using the "View Breakpoints" pop-up (the two-overlapping-red-circles button).
@@ -419,4 +423,4 @@ Multiple attempts are allowed.
 
 -----------------
 
-* You have reached the end of Lab 1. Yay!
+* You have reached the end of the lab. Yay!
