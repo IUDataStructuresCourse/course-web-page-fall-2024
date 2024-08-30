@@ -29,7 +29,7 @@ Expect at least one quiz per month during lab time.
 
 **Instructors**
 
-* Jeremy Siek (jsiek), office hours TDB, Luddy Room 3014, [make a reservation](https://outlook.office.com/bookwithme/user/7e2eaedb9dbb43868ba3f4dbe81e2972@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mlink)
+* Jeremy Siek (jsiek), office hours Mondays 1pm, Wednesdays 3pm, Luddy Room 3014, [make a reservation](https://outlook.office.com/bookwithme/user/7e2eaedb9dbb43868ba3f4dbe81e2972@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mlink)
 
 **Teaching Assistants**
 
@@ -64,7 +64,7 @@ Time    | Monday    | Tuesday    | Wednesday    | Thursday    | Friday
 Day     | Lecture Topic                                             | Reading Due  | Assignments and Due Dates | Link
 Aug. 26 | [Introduction](./lectures/introduction.md)                |              |         |
 Aug. 28 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        |         |
-Aug. 30 |                                                           |              | [Lab: Array Search and Testing](./lab1) | [code](https://autograder.luddy.indiana.edu/web/project/1323), [test](https://autograder.luddy.indiana.edu/web/project/1319)
+Aug. 30 |                                                           |              | [Lab: Array Search and Testing](./Search) | [code](https://autograder.luddy.indiana.edu/web/project/1323), [test](https://autograder.luddy.indiana.edu/web/project/1319)
 Sep. 2 | **Labor Day** no class
 Sep. 3 | | | Lab Array Search due
 Sep. 4 | [Algorithm Analysis](./lectures/algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_uluqvhj2))  | Ch. 2        | 
