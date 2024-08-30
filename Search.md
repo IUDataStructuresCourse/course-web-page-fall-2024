@@ -59,6 +59,7 @@ The code for this demo is available [here](https://github.com/IUDataStructuresCo
 Suppose our tasks are to implement, test and debug the "ripple" approach of array rotation
 (recall [lecture](https://iudatastructurescourse.github.io/course-web-page-spring-2024/lectures/array-rotation.html)).
 We first create an IntelliJ project called "Rotation". The file structure looks like:
+
 ![](assets/images/search/mint_proj.png)
 
 To create the Java class file where our implementation code resides, we right click
@@ -87,6 +88,7 @@ public class Rotation {
 
 Our next task is to create unit tests for `rotate_ripple`. Right click on the root
 directory and select "New -> Directory". Name the new directory `test`.
+
 ![](assets/images/search/new_test_dir.png)
 
 Right click on `test` in the file structure. Go to the last item in the pop-up menu
@@ -114,6 +116,7 @@ Move cursor to `junit`, where IntelliJ tells me that it cannot resolve the symbo
 Click on "Add 'JUnit' to classpath" and then "OK". Perform the same action on `jupiter`.
 
 ![](assets/images/search/add_junit.png)
+
 
 Add the following as a public member function of `RotationTest`:
 
@@ -176,6 +179,7 @@ Now that we have multiple test cases, we can select which tests to run
 using the drop-down menu in the top-right corner:
 
 ![](assets/images/search/choose_config.png)
+
 
 Suppose I made a mistake in the implementation. For example, if I did not assign `tmp2`
 to `tmp1`, it would cause the entire array to be filled with `A[0]` and produce a wrong
