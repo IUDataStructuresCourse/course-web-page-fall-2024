@@ -39,13 +39,14 @@ Expect at least one quiz per month during lab time.
 **Office Hours**
 
 Office hours with TAs are in Luddy Hall Room 0121.
+Office hours with Jeremy are in Luddy Hall Room 3014.
 
 Time    | Monday    | Tuesday    | Wednesday    | Thursday    | Friday
 11am    |           |            |              |             | 
 12pm    |           |            |              |             |
-1pm     |           |            |              |             | 
+1pm     | Jeremy    |            |              |             | 
 2pm     |           |            |              |             |
-3pm     |           |            |              |             | 
+3pm     |           |            | Jeremy       |             | 
 4pm     |           |            |              |             |
 5pm     |           |            |              |             |
 
