@@ -46,8 +46,8 @@ Time    | Monday    | Tuesday    | Wednesday    | Thursday    | Friday
 12pm    |           |            |              |             |
 1pm     | Jeremy    |            | Calvin       | Calvin      | 
 2pm     |           |            |              |             |
-3pm     |           |            | Jeremy       |             | 
-4pm     |           |            |              |             |
+3pm     |           |            | Jeremy       |             | Aaron
+4pm     |           |            |              |             | Aaron
 5pm     |           |            |              |             |
 
 
