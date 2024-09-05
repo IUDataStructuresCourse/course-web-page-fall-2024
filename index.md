@@ -77,7 +77,7 @@ Sep. 16 | Writing Proofs in Deduce                                  |           
 Sep. 18 | More about Deduce, Code Review (Flood It!)
 Sep. 20 |                                                           |              | Lab: Insertion Sort
 Sep. 23 | Quicksort and Java Interfaces                             |              | Insertion Sort due
-Sep. 25 | Sortinnng in Linear Time
+Sep. 25 | Sorting in Linear Time
 Sep. 27 |                                                           |              | Lab: Quicksort
 Sep. 30 | Binary Trees                                              |              | Quicksort due
 Oct. 2  | Binary Search Trees
