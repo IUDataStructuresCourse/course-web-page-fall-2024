@@ -1,4 +1,4 @@
-# Concatenating List of Lists
+# Concatenating a List of Lists
 
 Define a function named `concat` that turns a list-of-lists into a
 list. The `concat` function should have the following type.
@@ -67,6 +67,26 @@ define L13 = node(1, node(2, node(3, empty)))
 assert sum(L13) = sum_accum(L13, 0)
 ```
 
+# Cumulative Sum of a List
+
+The **cumulative sum** of a list of numbers produces a list where each
+element is the sum of all the elements of the input list up to and
+including the index of the current element.
+So if the input list is 
+```
+n0, n1, n2, ...
+```
+the output list is
+```
+n0, n0+n1, n0+n1+n2, ...
+```
+
+Define a function named `cumulative_sum` that performs this operation.
+The `cumulative_sum` function should have the following type.
+
+```
+cumulative_sum : List<Nat> -> List<Nat>
+```
 
 
 
