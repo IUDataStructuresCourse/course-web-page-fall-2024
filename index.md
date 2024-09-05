@@ -91,24 +91,24 @@ Oct. 18 |                                                           |           
 Oct. 21 | Recipes for Time Analysis and Testing                     |              | Segment Intersection due
 Oct. 23 | Hash Tables
 Oct. 25 |                                                           |              | Lab: Hash Table
-Oct. 28 | Heaps and Priority Queues
+Oct. 28 | Heaps and Priority Queues                                 |              | Hash Table due
 Oct. 30 | Code Review (Segment Intersection)
 Nov. 1  |                                                           |              | Lab: Huffman Coding (Heap Implementation)
-Nov. 4  | Graphs and Breadth-first Search
+Nov. 4  | Graphs and Breadth-first Search                           |              | Huffman Coding due
 Nov. 6  | Depth-first Search
 Nov. 8  |                                                           |              | Lab: Connected Components
-Nov. 11 |
-Nov. 13 |
+Nov. 11 | Shortest Paths                                            |              | Connected Components due
+Nov. 13 | Union Find
 Nov. 15 |                                                           |              | Project: Routing Wires
-Nov. 18 |
-Nov. 20 |
+Nov. 18 | Minimum Spanning Tree
+Nov. 20 | Dynamic Programming
 Nov. 22 |                                                           |              | Project: Routing Wires, cont'd
 Nov.24-Dec.1 | **Thanksgiving Break**
-Dec. 2 |
-Dec. 4 |
-Dec. 6 |                                                           |              | Lab: DNA Sequence Alignment
-Dec. 9 |
-Dec. 11 |
+Dec. 2 | DNA Alignment                                              |              | Routing Wires due
+Dec. 4 | More Dynamic Programming
+Dec. 6 |                                                            |              | Lab: DNA Sequence Alignment
+Dec. 9 | Code Review (Routing Wires)                                |              | DNA Sequence Alignment due
+Dec. 11 | Review for Final Exam
 Dec. 13 |                                                           |              | no lab
 Dec. 18 | **Final Exam** 8-10am
 
