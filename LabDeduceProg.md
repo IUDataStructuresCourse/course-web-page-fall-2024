@@ -1,11 +1,40 @@
+# Concatenating List of Lists
+
+Define a function named `concat` that turns a list-of-lists into a
+list. The `concat` function should have the following type.
+
+```
+concat : < E > fn List<List<E>> -> List<E>
+```
+
+In general, you may use any functions in `List.pf`.
+The following shows an example use of the `concat` function.
+
+```
+define L13 = node(1, node(2, node(3, empty)))
+define L45 = node(4, node(5, empty))
+define L15 = node(1, node(2, node(3, node(4, node(5, empty)))))
+assert concat(node(L13, node(L45, empty))) = L15
+```
+
+Use this `assert` statement and several of your own to test whether
+your `concat` function behaves as expected.
+
 
 # Quick Reverse, Accumulator-Passing Style
 
 The `reverse` function in `List.pf` is `O(n²)` time because it invokes
 append (`operator ++`) `n` times and append is `O(n)`. Define a
 function named `quick_rev` that reverses the input list and that is
-`O(n)` time. Use `assert` statements to test that your `quick_rev`
-function really reverses the input.
+`O(n)` time. The `quick_rev` function should be generic and have the
+following type.
+
+```
+quick_rev : < E > fn List<E> -> List<E>
+```
+
+Use `assert` statements to test whether your `quick_rev` function
+really reverses the input.
 
 Hint: we recommend that you define an auxilliary function that is
 written in accumulator-passing style.
