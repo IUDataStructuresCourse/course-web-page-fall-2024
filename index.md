@@ -72,23 +72,44 @@ Sep. 4  | [Algorithm Analysis](./lectures/algo-analysis.md) ([video](https://iu.
 Sep. 6  |                                                           |              | Lab: Work on [FloodIt! Project](./flood-it) | [code](https://autograder.luddy.indiana.edu/web/project/1302)
 Sep. 9  | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_cvtootj1)) | | FloodIt! Project due | 
 Sep. 11 | [Introduction to Deduce](./lectures/deduce-programming.md)
-Sep. 13 |                                                           |              | Lab: TBD
+Sep. 13 |                                                           |              | Lab: TBD (Quiz)
 Sep. 16 | Writing Proofs in Deduce                                  |              | Lab due
-Sep. 18 | More Deduce
+Sep. 18 | More about Deduce, Code Review (Flood It!)
 Sep. 20 |                                                           |              | Lab: Insertion Sort
 Sep. 23 | Quicksort and Java Interfaces                             |              | Insertion Sort due
-Sep. 25 | Binary Trees
+Sep. 25 | Sortinnng in Linear Time
 Sep. 27 |                                                           |              | Lab: Quicksort
-Sep. 30 | Binary Search Trees                                       |              | Quicksort due
-Oct. 2  | Balanced Search Trees (AVL)
+Sep. 30 | Binary Trees                                              |              | Quicksort due
+Oct. 2  | Binary Search Trees
 Oct. 4  |                                                           |              | Lab: Next Prev Binary Tree
 Oct. 7  | Review for Midterm Exam                                   |              | Next Prev Binary Tree due
 Oct. 9  | **Midterm Exam** (in class)
-Oct. 11 | **Fall Break**                                            |              | no lab
+Oct. 11 | **Fall Break**                                            |              | No Lab
+Oct. 14 | Balanced Search Trees (AVL)
+Oct. 16 | More AVL
 Oct. 18 |                                                           |              | Lab: Segment Intersection
-Oct. 21 |                                                           |              | Segment Intersection due
-
+Oct. 21 | Recipes for Time Analysis and Testing                     |              | Segment Intersection due
+Oct. 23 | Hash Tables
+Oct. 25 |                                                           |              | Lab: Hash Table
+Oct. 28 | Heaps and Priority Queues
+Oct. 30 | Code Review (Segment Intersection)
+Nov. 1  |                                                           |              | Lab: Huffman Coding (Heap Implementation)
+Nov. 4  | Graphs and Breadth-first Search
+Nov. 6  | Depth-first Search
+Nov. 8  |                                                           |              | Lab: Connected Components
+Nov. 11 |
+Nov. 13 |
+Nov. 15 |                                                           |              | Project: Routing Wires
+Nov. 18 |
+Nov. 20 |
+Nov. 22 |                                                           |              | Project: Routing Wires, cont'd
 Nov.24-Dec.1 | **Thanksgiving Break**
+Dec. 2 |
+Dec. 4 |
+Dec. 6 |                                                           |              | Lab: DNA Sequence Alignment
+Dec. 9 |
+Dec. 11 |
+Dec. 13 |                                                           |              | no lab
 Dec. 18 | **Final Exam** 8-10am
 
 **Resources**
