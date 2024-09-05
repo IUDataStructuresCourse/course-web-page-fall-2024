@@ -88,6 +88,7 @@ The `cumulative_sum` function should have the following type.
 cumulative_sum : List<Nat> -> List<Nat>
 ```
 
+Test your `cumulative_sum` function with several `assert` statements.
 
 
 
