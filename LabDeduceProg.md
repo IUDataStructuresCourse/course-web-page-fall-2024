@@ -43,7 +43,10 @@ assert sum(L13) = sum_accum(L13, 0)
 
 
 <!--
-```{.deduce file=LabFunProg.pf}
+```{.deduce file=LabDeduceProg.pf}
+import List
+import Nat
+
 <<sum_list>>
 <<sum_accum>>
 <<sum_accum_test>>
