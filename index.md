@@ -103,7 +103,7 @@ Nov. 15 |                                                           |           
 Nov. 18 | Minimum Spanning Tree
 Nov. 20 | Dynamic Programming
 Nov. 22 |                                                           |              | Project: Routing Wires, cont'd
-Nov.24-Dec.1 | **Thanksgiving Break**
+Nov. 24 - Dec. 1 | **Thanksgiving Break**
 Dec. 2 | DNA Alignment                                              |              | Routing Wires due
 Dec. 4 | More Dynamic Programming
 Dec. 6 |                                                            |              | Lab: DNA Sequence Alignment
