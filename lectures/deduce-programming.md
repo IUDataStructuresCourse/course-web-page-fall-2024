@@ -154,7 +154,7 @@ union List<T> {
 For example, the sequence of numbers `1, 2, 3` is represented
 by the following linked list.
 
-``` {.deduce #list_123}
+```
 define list_123 : List<Nat> = node(1, node(2, node(3, empty)))
 ```
 
@@ -182,7 +182,7 @@ import Nat
 You can ask Deduce to print a value to standard output using the
 `print` statement.
 
-```{.deduce #print_five}
+```
 print five
 ```
 
@@ -196,7 +196,7 @@ Functions are created with a λ expression.  Their syntax starts with
 in braces.  For example, the following defines a function for
 computing the area of a rectangle.
 
-```{.deduce #area}
+```
 define area : fn Nat,Nat -> Nat = λ h, w { h * w }
 ```
 
@@ -206,7 +206,7 @@ parameter types, then `->`, and finally the return type.
 To call a function, apply it to the appropriate number and type of
 arguments.
 
-```{.deduce #print_area}
+```
 print area(3, 4)
 ```
 
