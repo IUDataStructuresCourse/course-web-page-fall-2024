@@ -1,59 +1,33 @@
 # Review of Big-O
 
+**Definition** (Asympotic Less-Than) A function f is asymptotically
+slower or equal to function g, written **f ≲ g** if and only if
+
+    ∃ k c. ∀ n ≥ k. f(n) ≤ c g(n).
+
+
 **Definition** (Big-O) For a given function g, we define **O(g)** as the
-the set of functions that grow similarly or slower than g. More
-precisely, 
+the set of functions that are asympotically slower or equal to g. More
 
-    f ∈ O(g) iff ∃ k c. ∀ n ≥ k. f(n) ≤ c g(n).
+    O(g) = { f | f ≲ g }
 
-**Notation** We write f ≲ g iff f ∈ O(g), and say that f is
-asymptotically less-or-equal to g.
 
-## Example: anagram detection
+We use asympotic comparisons for
+1) the worst-case execution time of a program
+2) the amount of space (memory) allocated by a program
+
+
+## Student Exercise: anagram detection
 
 Two words are **anagrams** of each other if they contain the same
 characters, that is, they are a rearrangement of each other.
 
 examples: mary <-> army, silent <-> listen, doctor who <-> torchwood
 
-1)
-Do an array search on an array made of the letters of the second word
-and search for each letter of the first word.
-Cross off the letter you find.
+Think of an algorithm for detecting when two words are anagrams.
+What is the time complexity of your method?
 
-for ...  n
-  for ... n
-
-O(n^2)
-
-2) Generate all permutations of the first word.
-Check whether the second word is in the list of permutations.
-
-O(n!)
-
-3) sort both words, trim spaces, check for equality.
-
-O(n log(n)) + O(n) + O(n)
-= O(n log(n))
-
-4) create a hashmap that maps letters to # occurences for each word,
-   then compare the hashmaps for equality
-
-O(n)*
-
-* assuming O(1) access to the hashtable
-
-
-
-
-
-
-
-
-
-
-For the following algorithms, what's the time complexity? space
-complexity?
+Solutions:
 
 * Algorithm 0:
   Generate all permutations of the first word.
@@ -108,7 +82,7 @@ complexity?
 	 Choose k = k₁ + k₂ (⇒∃).
 	 Choose c = c₁ + c₂ (⇒∃).
 	 ∀n ≥ k₁ + k₂. f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
-	 Let n be a number and assume n ≥ k₁ + k₂. (⇒∀)
+	 Let n be an arbitrary number and suppose n ≥ k₁ + k₂. (⇒∀)
 	 We need to show that f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
 	 equivalently: f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n)
 	 From (1) and (2) we have
@@ -138,9 +112,6 @@ n    log n   2 log n   n / 2
 32    5       10      16
 
 ∀ n ≥ 16. 2 log n ≤ n / 2
-
-
-
 
 To make it easy to compute log n, let's look at powers of 2.
 
@@ -176,18 +147,17 @@ Choose c = 1.
 
 # Practice analyzing the time complexity of an algorithm: Insertion Sort
 
-	public static void insertion_sort(int[] A) { // let n = A.length 
-		for (int j = 1; j != A.length; ++j) { // n iterations, body: O(1)+O(1)+O(n)+O(1)=O(n), for loop total: O(n)*O(n)=O(n^2)
-			int key = A[j]; O(1)
-			int i = j - 1;  O(1)
-			while (i >= 0 && A[i] > key) { // n iterations, body: O(n), while loop total: O(1)*O(n) = O(n) 
-				A[i+1] = A[i];  O(1)
-				i -= 1;         O(1)
+	public static void insertion_sort(int[] A) {
+		for (int j = 1; j != A.length; ++j) {
+			int key = A[j];
+			int i = j - 1;
+			while (i >= 0 && A[i] > key) {
+				A[i+1] = A[i];
+				i -= 1;
 			}
-			A[i+1] = key;       O(1)
+			A[i+1] = key;
 		}
 	}
-
 
 
 What is the time complexity of insertion_sort?
@@ -227,12 +197,12 @@ TreeMap  (Balanced Binary Search Tree)
 * O(log(n))                   logarithmic
 * O(n)                        linear
 * O(n log(n))
-* O(n²), O(n^3), etc.         polynomial
-* O(2^n), O(3^n), etc.        exponential
-* O(n!)                       factorial
+* O(n²), O(n³), etc.         polynomial
+* O(2ⁿ), O(3ⁿ), etc.         exponential
+* O(n!)                      factorial
 
-O(5n)
-O(n^n)? 
+O(5n)?
+O(nⁿ)? 
 
 # Lower bounds
 
@@ -265,11 +235,11 @@ in Θ(g).
 
 # Relationships between Θ, O, and Ω.
 
-* Θ(g) ⊆ O(g), f ≈ g implies f ≲ g
+* f ≈ g implies f ≲ g, Θ(g) ⊆ O(g)
 
-* Θ(g) ⊆ Ω(g), f ≈ g implies g ≲ f
+* f ≈ g implies g ≲ f, Θ(g) ⊆ Ω(g)
 
-* Θ(g) = Ω(g) ∩ O(g), f ≈ g iff (f ≲ g and g ≲ f)
+* f ≈ g iff (f ≲ g and g ≲ f), Θ(g) = Ω(g) ∩ O(g)
 
 # Example: Merge Sort
 
