@@ -1,18 +1,18 @@
 # Review of Big-O
 
-**Definition** (Asympotic Less-Than) A function f is asymptotically
+**Definition** (Asymptotic Less-Than) A function f is asymptotically
 slower or equal to function g, written **f ≲ g** if and only if
 
     ∃ k c. ∀ n ≥ k. f(n) ≤ c g(n).
 
 
 **Definition** (Big-O) For a given function g, we define **O(g)** as the
-the set of functions that are asympotically slower or equal to g. More
+the set of functions that are asymptotically slower or equal to g. More
 
     O(g) = { f | f ≲ g }
 
 
-We use asympotic comparisons for
+We use asymptotic comparisons for
 1) the worst-case execution time of a program
 2) the amount of space (memory) allocated by a program
 
@@ -41,11 +41,11 @@ Solutions:
 * Algorithm 2:
   Sort both strings then 
   compare the sorted strings for equality
-  This is O(n lg n) time and O(1) space.
+  This is O(n log n) time and O(1) space.
 
 * Algorithm 3:
-  Count letter occurences in both words and then compare
-	  the number of occurences of each letter.
+  Count letter occurrences in both words and then compare
+	  the number of occurrences of each letter.
   This is O(n) time and O(k) space
   (where k is the number of characters in the alphabet).
 
@@ -224,7 +224,7 @@ of functions that grow at the same rate as g(n):
 We say that g is an *asymptotically tight bound* for each function
 in Θ(g).
 
-**Notation** f ≈ g means f ∈ Θ(g). We say f and g are asympotically equivalent.
+**Notation** f ≈ g means f ∈ Θ(g). We say f and g are asymptotically equivalent.
 
 
 # Reasoning about bounds.
@@ -296,3 +296,8 @@ So the total work is c n log(n).
 
 Time complexity is O(n log(n)).
 
+
+<!--  LocalWords:  mary torchwood QED ab IH int LinkedList ArrayList
+ -->
+<!--  LocalWords:  HashSet HashMap TreeSet TreeMap iff copyOfRange
+ -->
