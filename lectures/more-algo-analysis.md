@@ -114,6 +114,8 @@ n    log n   2 log n   n / 2
 ∀ n ≥ 16. 2 log n ≤ n / 2
 
 To make it easy to compute log n, let's look at powers of 2.
+(Recall that log(2ˣ) = x.)
+
 
 |  n  | log n | 2 log n | n/2 |
 | --- | ----- | ------- | --- |
