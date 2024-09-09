@@ -45,7 +45,7 @@ Solutions:
 
 * Algorithm 3:
   Count letter occurrences in both words and then compare
-	  the number of occurrences of each letter.
+      the number of occurrences of each letter.
   This is O(n) time and O(k) space
   (where k is the number of characters in the alphabet).
 
@@ -53,44 +53,44 @@ Solutions:
 
 * Polynomials:
     If f(n) = cᵢ nⁱ + ... + c₁ n¹ + c₀, 
-	then f ≲ nⁱ.
-	
+    then f ≲ nⁱ.
+    
 * Addition:
     If f₁ ≲ g and f₂ ≲ g,
     then f₁ + f₂ ≲ g.
-	
+    
 * Multiplication:
     If f₁ ≲ g₁ and f₂ ≲ g₂,
     then f₁ × f₂ ≲ g₁ × g₂.
-	
+    
 * Reflexivity:
     f ≲ f
-	
+    
 * Transitivity:
     f ≲ g and g ≲ h implies f ≲ h
 
 ## Proof of the rule for addition
 
-	Theorem. If f₁ ≲ g and f₂ ≲ g, then f₁ + f₂ ≲ g.
-	Proof.
-	 Suppose f₁ ≲ g and f₂ ≲ g.
-	 So   ∀n ≥ k₁. f₁(n) ≤ c₁ × g(n)    (1)
-	 and  ∀n ≥ k₂. f₂(n) ≤ c₂ × g(n)    (2)
-	 by (∃⇒).
+    Theorem. If f₁ ≲ g and f₂ ≲ g, then f₁ + f₂ ≲ g.
+    Proof.
+     Suppose f₁ ≲ g and f₂ ≲ g.
+     So   ∀n ≥ k₁. f₁(n) ≤ c₁ × g(n)    (1)
+     and  ∀n ≥ k₂. f₂(n) ≤ c₂ × g(n)    (2)
+     by (∃⇒).
 
-	 We need to show that ∃k c. ∀n ≥ k. f₁(n) + f₂(n) ≤ c × g(n)
-	 Choose k = k₁ + k₂ (⇒∃).
-	 Choose c = c₁ + c₂ (⇒∃).
-	 ∀n ≥ k₁ + k₂. f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
-	 Let n be an arbitrary number and suppose n ≥ k₁ + k₂. (⇒∀)
-	 We need to show that f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
-	 equivalently: f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n)
-	 From (1) and (2) we have
-	   f₁(n) ≤ c₁ × g(n)
-	   f₂(n) ≤ c₂ × g(n)
-	 and therefore
-	   f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n).
-	QED
+     We need to show that ∃k c. ∀n ≥ k. f₁(n) + f₂(n) ≤ c × g(n)
+     Choose k = k₁ + k₂ (⇒∃).
+     Choose c = c₁ + c₂ (⇒∃).
+     ∀n ≥ k₁ + k₂. f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
+     Let n be an arbitrary number and suppose n ≥ k₁ + k₂. (⇒∀)
+     We need to show that f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
+     equivalently: f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n)
+     From (1) and (2) we have
+       f₁(n) ≤ c₁ × g(n)
+       f₂(n) ≤ c₂ × g(n)
+     and therefore
+       f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n).
+    QED
 
 ## Student Exercise
 
@@ -133,7 +133,7 @@ Choose c = 1.
     We need to show that ∀ n ≥ 16. 2 log n ≤ n / 2.
     Proof by induction.
     Base case n = 16. 
-	  2 log 16 = 8 = n / 2.
+      2 log 16 = 8 = n / 2.
     Induction step. Assume k > 16.
       Assume 2 log(k) ≤ k/2 (Induction Hypothesis).
       We need to show that 2 log (k + 1) ≤ (k + 1) / 2.
@@ -149,17 +149,17 @@ Choose c = 1.
 
 # Practice analyzing the time complexity of an algorithm: Insertion Sort
 
-	public static void insertion_sort(int[] A) {
-		for (int j = 1; j != A.length; ++j) {
-			int key = A[j];
-			int i = j - 1;
-			while (i >= 0 && A[i] > key) {
-				A[i+1] = A[i];
-				i -= 1;
-			}
-			A[i+1] = key;
-		}
-	}
+    public static void insertion_sort(int[] A) {
+        for (int j = 1; j != A.length; ++j) {
+            int key = A[j];
+            int i = j - 1;
+            while (i >= 0 && A[i] > key) {
+                A[i+1] = A[i];
+                i -= 1;
+            }
+            A[i+1] = key;
+        }
+    }
 
 
 What is the time complexity of insertion_sort?
@@ -172,18 +172,18 @@ Answer:
 # Time Complexity of Java collection operations
 
 * LinkedList
-	* add: O(1)
-	* get: O(n)
-	* contains: O(n)
-	* remove: O(1)
+    * add: O(1)
+    * get: O(n)
+    * contains: O(n)
+    * remove: O(1)
     * size: O(1)
 
 * ArrayList
-	* add: O(1)*
-	* get: O(1)
-	* set: O(1)
-	* contains: O(n)
-	* remove: O(n)
+    * add: O(1)*
+    * get: O(1)
+    * set: O(1)
+    * contains: O(n)
+    * remove: O(n)
     * size: O(1)
 
 HashSet
@@ -251,46 +251,46 @@ Split the array in half and sort the two halves.
 
 Merge the two halves.
 
-	private static int[] merge(int[] left, int[] right) {
-	   int[] A = new int[left.length + right.length];
-	   int i = 0;
-	   int j = 0;
-	   for (int k = 0; k != A.length; ++k) {
-		   if (i < left.length
-			   && (j ≥ right.length || left[i] <= right[j])) {
-			  A[k] = left[i];
-			  ++i;
-		   } else if (j < right.length) {
-			  A[k] = right[j];
-			  ++j;
-		   }
-	   }
-	   return A;
-	}
+    private static int[] merge(int[] left, int[] right) {
+       int[] A = new int[left.length + right.length];
+       int i = 0;
+       int j = 0;
+       for (int k = 0; k != A.length; ++k) {
+           if (i < left.length
+               && (j ≥ right.length || left[i] <= right[j])) {
+              A[k] = left[i];
+              ++i;
+           } else if (j < right.length) {
+              A[k] = right[j];
+              ++j;
+           }
+       }
+       return A;
+    }
 
-	public static int[] merge_sort(int[] A) {
-	   if (A.length > 1) {
-		   int middle = A.length / 2;
-		   int[] L = merge_sort(Arrays.copyOfRange(A, 0, middle));
-		   int[] R = merge_sort(Arrays.copyOfRange(A, middle, A.length));
-		   return merge(L, R);
-	   } else {
-		   return A;
-	   }
-	}    
+    public static int[] merge_sort(int[] A) {
+       if (A.length > 1) {
+           int middle = A.length / 2;
+           int[] L = merge_sort(Arrays.copyOfRange(A, 0, middle));
+           int[] R = merge_sort(Arrays.copyOfRange(A, middle, A.length));
+           return merge(L, R);
+       } else {
+           return A;
+       }
+    }    
 
 What's the time complexity?
 
 Recursion tree:
 
-			   c*n                    = c*n
-			 /     \
-			/       \
-	   c*n/2        c*n/2             = c*n
-	   /  \         /   \
-	  /    \       /     \     
-	c*n/4  c*n/4  c*n/4  c*n/4        = c*n
-	...
+               c*n                    = c*n
+             /     \
+            /       \
+       c*n/2        c*n/2             = c*n
+       /  \         /   \
+      /    \       /     \     
+    c*n/4  c*n/4  c*n/4  c*n/4        = c*n
+    ...
 
 Height of the recursion tree is log(n).
 
