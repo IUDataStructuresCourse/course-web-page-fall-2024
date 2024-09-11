@@ -71,7 +71,7 @@ Sep. 3  | | | Lab Array Search due
 Sep. 4  | [Algorithm Analysis](./lectures/algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_uluqvhj2))  | Ch. 2        | 
 Sep. 6  |                                                           |              | Lab: Work on [FloodIt! Project](./flood-it) | [code](https://autograder.luddy.indiana.edu/web/project/1302)
 Sep. 9  | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_cvtootj1)) | | FloodIt! Project due | 
-Sep. 11 | [Introduction to Deduce](./lectures/deduce-programming.md)
+Sep. 11 | [Introduction to Deduce and Linked Lists](./lectures/deduce-programming.md)
 Sep. 13 |                                                           |              | Lab: [Linked Lists](./LabDeduceProg.md) (Quiz in Lab)
 Sep. 16 | Writing Proofs in Deduce                                  |              | Lab due
 Sep. 18 | More about Deduce, Code Review (Flood It!)
