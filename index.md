@@ -73,7 +73,7 @@ Sep. 6  |                                                           |           
 Sep. 9  | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_cvtootj1)) | | FloodIt! Project due | 
 Sep. 11 | [Introduction to Deduce and Linked Lists](./lectures/deduce-programming.md)
 Sep. 13 |                                                           |              | Lab: [Linked Lists](./LabDeduceProg.md) (Quiz in Lab)
-Sep. 16 | Writing Proofs in Deduce                                  |              | Lab due
+Sep. 16 | [Writing Proofs in Deduce](./lectures/deduce-intro-proof.md)                                  |              | Lab due
 Sep. 18 | More about Deduce, Code Review (Flood It!)
 Sep. 19 |                                                           |              | Homework: [Proof Exercises](https://iu.instructure.com/courses/2249383/assignments/16807557) due
 Sep. 20 |                                                           |              | Lab: Insertion Sort
