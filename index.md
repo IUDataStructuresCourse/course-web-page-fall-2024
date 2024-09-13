@@ -76,8 +76,8 @@ Sep. 13 |                                                           |           
 Sep. 16 | [Writing Proofs in Deduce](./lectures/deduce-intro-proof.md)                                  |              | Lab due
 Sep. 18 | More about Proofs, Correctness of Insertion Sort 
 Sep. 19 |                                                           |              | Homework: [Proof Exercises](https://iu.instructure.com/courses/2249383/assignments/16807557) due
-Sep. 20 |                                                           |              | Lab: Insertion Sort
-Sep. 23 | Code Review (Flood It!), Quicksort, Java Interfaces                             |              | Insertion Sort due
+Sep. 20 |                                                           |              | [Lab: Insertion Sort](https://iu.instructure.com/courses/2249383/assignments/16808404)
+Sep. 23 | Code Review (Flood It!), Quicksort, Java Interfaces       |              | Insertion Sort due
 Sep. 25 | Sorting in Linear Time
 Sep. 27 |                                                           |              | Lab: Quicksort
 Sep. 30 | Binary Trees                                              |              | Quicksort due
