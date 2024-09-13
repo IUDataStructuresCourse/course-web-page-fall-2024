@@ -75,7 +75,7 @@ Sep. 11 | [Introduction to Deduce and Linked Lists](./lectures/deduce-programmin
 Sep. 13 |                                                           |              | Lab: [Linked Lists](./LabDeduceProg.md) (Quiz in Lab)
 Sep. 16 | Writing Proofs in Deduce                                  |              | Lab due
 Sep. 18 | More about Deduce, Code Review (Flood It!)
-Sep. 19 |                                                           |              | Homework: [Proof Exercises](https://iu.instructure.com/courses/2249383/assignments/16807557)
+Sep. 19 |                                                           |              | Homework: [Proof Exercises](https://iu.instructure.com/courses/2249383/assignments/16807557) due
 Sep. 20 |                                                           |              | Lab: Insertion Sort
 Sep. 23 | Quicksort and Java Interfaces                             |              | Insertion Sort due
 Sep. 25 | Sorting in Linear Time
