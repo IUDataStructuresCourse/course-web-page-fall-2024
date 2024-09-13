@@ -74,10 +74,10 @@ Sep. 9  | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([vi
 Sep. 11 | [Introduction to Deduce and Linked Lists](./lectures/deduce-programming.md)
 Sep. 13 |                                                           |              | Lab: [Linked Lists](./LabDeduceProg.md) (Quiz in Lab)
 Sep. 16 | [Writing Proofs in Deduce](./lectures/deduce-intro-proof.md)                                  |              | Lab due
-Sep. 18 | More about Deduce, Code Review (Flood It!)
+Sep. 18 | More about Proofs, Correctness of Insertion Sort 
 Sep. 19 |                                                           |              | Homework: [Proof Exercises](https://iu.instructure.com/courses/2249383/assignments/16807557) due
 Sep. 20 |                                                           |              | Lab: Insertion Sort
-Sep. 23 | Quicksort and Java Interfaces                             |              | Insertion Sort due
+Sep. 23 | Code Review (Flood It!), Quicksort, Java Interfaces                             |              | Insertion Sort due
 Sep. 25 | Sorting in Linear Time
 Sep. 27 |                                                           |              | Lab: Quicksort
 Sep. 30 | Binary Trees                                              |              | Quicksort due
