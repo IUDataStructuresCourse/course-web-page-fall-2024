@@ -1,4 +1,48 @@
-# Concatenating a List of Lists
+# Lab: Linked Lists
+
+## Overview
+For this lab, you will write and test 3 functions with linked lists in the deduce programming language.
+
+### Table of Contents
+
+1. [Deduce Setup](#deduce-setup)
+2. **[Problem Set](#problem-set)**
+
+## Deduce Setup
+
+### Installation
+You can find the code for deduce [here](https://github.com/jsiek/deduce), as well as instructions on running your code.
+
+You also need to install [python](https://www.python.org/), if you haven't already. Here are some [instructions](https://wiki.python.org/moin/BeginnersGuide/Download) and links to the download for various systems.
+
+
+To install the requisite packages for deduce, run the following command in the same directory as `deduce.py`.
+```bash
+python -m pip install lark
+```
+
+### Running a proof file
+Create a file in the same directory as `deduce.py` called `hello.pf`, and paste the following into it.
+```
+import Nat
+
+define hello = 42
+
+print hello
+```
+Then run the command
+```bash
+python ./deduce.py ./hello.pf
+```
+and you should see the following output.
+```
+42
+hello.pf is valid
+```
+
+## Problem Set
+
+### 1. Concatenating a List of Lists
 
 Define a function named `concat` that turns a list-of-lists into a
 list. The `concat` function should have the following type.
@@ -21,7 +65,7 @@ Use this `assert` statement and several of your own to test whether
 your `concat` function behaves as expected.
 
 
-# Quick Reverse, Accumulator-Passing Style
+### 2. Quick Reverse, Accumulator-Passing Style
 
 The `reverse` function in `List.pf` is `O(n²)` time because it invokes
 append (`operator ++`) `n` times and append is `O(n)`. Define a
@@ -67,7 +111,7 @@ define L13 = node(1, node(2, node(3, empty)))
 assert sum(L13) = sum_accum(L13, 0)
 ```
 
-# Cumulative Sum of a List
+### 3. Cumulative Sum of a List
 
 The **cumulative sum** of a list of numbers produces a list where each
 element is the sum of all the elements of the input list up to and
