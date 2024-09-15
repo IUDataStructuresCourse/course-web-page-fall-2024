@@ -35,4 +35,4 @@ Test `quicksort()` thoroughly in `StudentTest.java`.
 
 -----------------
 
-* You have reached the end of Lab 5. Yay!
+* You have reached the end of the Lab. Yay!
