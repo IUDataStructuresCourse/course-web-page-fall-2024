@@ -79,7 +79,7 @@ Sep. 19 |                                                           |           
 Sep. 20 |                                                           |              | [Lab: Insertion Sort](https://iu.instructure.com/courses/2249383/assignments/16808404)
 Sep. 23 | Code Review (Flood It!), Quicksort, Java Interfaces       |              | Insertion Sort due
 Sep. 25 | Sorting in Linear Time
-Sep. 27 |                                                           |              | Lab: Quicksort
+Sep. 27 |                                                           |              | Lab: [Quicksort](https://iudatastructurescourse.github.io/course-web-page-fall-2024/QuickSort)
 Sep. 30 | Binary Trees                                              |              | Quicksort due
 Oct. 2  | Binary Search Trees
 Oct. 4  |                                                           |              | Lab: Next Prev Binary Tree
