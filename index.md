@@ -80,14 +80,14 @@ Sep. 20 |                                                           |           
 Sep. 23 | [Code Review (Flood It!)](./lectures/floodit-review.md), [Quicksort](./lectures/quicksort.md)       |              | Insertion Sort due
 Sep. 25 | [Java Interfaces](./lectures/interfaces.md)
 Sep. 27 |                                                           |              | Lab: [Quicksort](https://iudatastructurescourse.github.io/course-web-page-fall-2024/QuickSort)
-Sep. 30 | [Sorting in Linear Time](./lectures/sort-linear.md), [Binary Trees](./lectures/binary-trees.md)                                              |              | Quicksort due
-Oct. 2  | Binary Search Trees
+Sep. 30 | [Sorting in Linear Time](./lectures/sort-linear.md)                                              |              | Quicksort due
+Oct. 2  | [Binary Trees](./lectures/binary-trees.md)
 Oct. 4  |                                                           |              | Lab: [Next Prev Binary Tree](./NextPrevTree.md) | [code](https://autograder.luddy.indiana.edu/web/project/1304), [test](https://autograder.luddy.indiana.edu/web/project/1321)
 Oct. 7  | Review for Midterm Exam                                   |              | Next Prev Binary Tree due
 Oct. 9  | **Midterm Exam** (in class)
 Oct. 11 | **Fall Break**                                            |              | No Lab
-Oct. 14 | Balanced Search Trees (AVL)
-Oct. 16 | More AVL
+Oct. 14 | Binary Search Trees
+Oct. 16 | Balanced Search Trees (AVL)
 Oct. 18 |                                                           |              | Lab: Segment Intersection
 Oct. 21 | Recipes for Time Analysis and Testing                     |              | Segment Intersection due
 Oct. 23 | Hash Tables
