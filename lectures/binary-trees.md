@@ -1,81 +1,8 @@
-# Lecture Overview
-
-* More Interfaces
-* Binary Trees
-
-# More Interfaces (aka. Abstract Data Types)
-
-## Stack (LIFO)
-
-analogy: stack of pancakes
-
-	interface Stack<E> {
-		void push(E d);
-		E pop();
-		E peek();
-		boolean empty();
-	}
-
-Example uses: 
-
-* reverse an array
-* check for matching parentheses (with multiple kinds: square, round, curly)
-* parsing (e.g. HTML)
-* depth-search search
-* procedure call stack
-
-Implementation:
-
-* array (push is add to the end, pop removes from end)
-* singly-linked list (push on front, pop from front)
-
-## Queue (FIFO)
-
-Analogy: checkout line at a grocery store 
-
-	interface Queue<E> {
-		void enqueue(E e); // aka. push
-		E dequeue(); // aka. pop
-		E front();
-		boolean empty();
-	}
-
-Example uses: 
-
-* breadth-first search, 
-* requests to a shared resource (e.g., printer),
-* interupt handling inside an OS kernel, 
-* buffering to handle asynchronous communiation, such as interprocess IO,
-	disk access, etc.
-
-Implementation: 
-
-* array
-* doubly-linked list
-
-## Set
-
-Like a set in mathematics. A collection of elements where the ordering
-of the elements is not important, only membership matters.
-`Set` ignores duplicates.
-
-	interface Set {
-	   void insert(int e);
-	   void remove();
-	   boolean member(int e);
-	   boolean empty();
-	   Set union(Set other);
-	   Set intersect(Set other);
-	   Set difference(Set other);
-	}
-
-Implementations of `Set` are the topic of several future lectures.
-
-# Binary Trees and Binary Search Trees
+# Binary Trees
 
 ## Motivation 
 
-Taking stock with respect to Flood-it! and the Set ADT
+Taking stock with respect to Flood-it! and the Set interface
 
 |                  |  array | linked list | sorted array |
 | ---------------- |:------:|:-----------:|:------------:|

@@ -1,6 +1,7 @@
 ## Java Interfaces, a quick reminder
 
-An interface acts as an intermediary between data structures and algorithms.
+An interface, aka. Abstract Data Type, acts as an intermediary between
+data structures and algorithms.
 
 An interface specifies some methods that are common to several
 data structures and that are needed by one or more algorithms.
@@ -159,3 +160,71 @@ also be used with Array!
     assert i == B.end();
 
 The solutions to the in-class exercises are [here](./interfaces-solutions.md).
+
+## More Interfaces
+
+### Stack (LIFO)
+
+analogy: stack of pancakes
+
+	interface Stack<E> {
+		void push(E d);
+		E pop();
+		E peek();
+		boolean empty();
+	}
+
+Example uses: 
+
+* reverse an array
+* check for matching parentheses (with multiple kinds: square, round, curly)
+* parsing (e.g. HTML)
+* depth-search search
+* procedure call stack
+
+Implementation:
+
+* array (push is add to the end, pop removes from end)
+* singly-linked list (push on front, pop from front)
+
+### Queue (FIFO)
+
+Analogy: checkout line at a grocery store 
+
+	interface Queue<E> {
+		void enqueue(E e); // aka. push
+		E dequeue(); // aka. pop
+		E front();
+		boolean empty();
+	}
+
+Example uses: 
+
+* breadth-first search, 
+* requests to a shared resource (e.g., printer),
+* interupt handling inside an OS kernel, 
+* buffering to handle asynchronous communiation, such as interprocess IO,
+	disk access, etc.
+
+Implementation: 
+
+* array
+* doubly-linked list
+
+### Set
+
+Like a set in mathematics. A collection of elements where the ordering
+of the elements is not important, only membership matters.
+`Set` ignores duplicates.
+
+	interface Set {
+	   void insert(int e);
+	   void remove();
+	   boolean member(int e);
+	   boolean empty();
+	   Set union(Set other);
+	   Set intersect(Set other);
+	   Set difference(Set other);
+	}
+
+Implementations of `Set` are the topic of several future lectures.

@@ -78,9 +78,9 @@ Sep. 18 | More about Proofs, Correctness of Insertion Sort
 Sep. 19 |                                                           |              | Homework: [Proof Exercises](https://iu.instructure.com/courses/2249383/assignments/16807557) due
 Sep. 20 |                                                           |              | [Lab: Insertion Sort](https://iu.instructure.com/courses/2249383/assignments/16808404)
 Sep. 23 | [Code Review (Flood It!)](./lectures/floodit-review.md), [Quicksort](./lectures/quicksort.md)       |              | Insertion Sort due
-Sep. 25 | [Java Interfaces](./lectures/interfaces.md), [Sorting in Linear Time](./lectures/sort-linear.md)
+Sep. 25 | [Java Interfaces](./lectures/interfaces.md)
 Sep. 27 |                                                           |              | Lab: [Quicksort](https://iudatastructurescourse.github.io/course-web-page-fall-2024/QuickSort)
-Sep. 30 | Binary Trees                                              |              | Quicksort due
+Sep. 30 | [Sorting in Linear Time](./lectures/sort-linear.md), [Binary Trees](./lectures/binary-trees.md)                                              |              | Quicksort due
 Oct. 2  | Binary Search Trees
 Oct. 4  |                                                           |              | Lab: [Next Prev Binary Tree](./NextPrevTree.md) | [code](https://autograder.luddy.indiana.edu/web/project/1304), [test](https://autograder.luddy.indiana.edu/web/project/1321)
 Oct. 7  | Review for Midterm Exam                                   |              | Next Prev Binary Tree due
