@@ -143,19 +143,17 @@ where does 3 go? 3-1=2
 
 Counting sort in Java:
 
-TODO: change from k + 1 to k -Jeremy
-
 ```java
 static void counting_sort(int[] A, int[] B, int k) {
-   int[] C = new int[k+1]; // counts of each element of A     O(n)
-   int[] L = new int[k+1];  // L[j] = number of elements less or equal j.    O(n)
+   int[] C = new int[k]; // counts of each element of A     O(n)
+   int[] L = new int[k];  // L[j] = number of elements less or equal j.    O(n)
    // stage 1: counting
    for (int i = 0; i != A.length; ++i) { // O(n)
 	  C[A[i]] = 1 + C[A[i]];
    }
    // stage 2: cummulative sum
    L[0] = C[0];
-   for (int j = 1; j != k+1; ++j) {    // O(k)
+   for (int j = 1; j != k; ++j) {    // O(k)
 	  L[j] = C[j] + L[j-1];
    }
    // stage 3: produce output
