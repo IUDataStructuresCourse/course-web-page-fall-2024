@@ -79,7 +79,7 @@ Sep. 19 |                                                           |           
 Sep. 20 |                                                           |              | [Lab: Insertion Sort](https://iu.instructure.com/courses/2249383/assignments/16808404)
 Sep. 23 | [Code Review (Flood It!)](./lectures/floodit-review.md), [Quicksort](./lectures/quicksort.md)       |              | Insertion Sort due
 Sep. 25 | [Java Interfaces](./lectures/interfaces.md)
-Sep. 27 |                                                           |              | Lab: [Quicksort](./QuickSort)
+Sep. 27 |                                                           |              | Lab: [Quicksort](./QuickSort) | [code](https://autograder.luddy.indiana.edu/web/project/1304), [test](https://autograder.luddy.indiana.edu/web/project/1316)
 Sep. 30 | [Sorting in Linear Time](./lectures/sort-linear.md)                                              |              | Quicksort due
 Oct. 2  | [Binary Trees](./lectures/binary-trees.md)
 Oct. 4  |                                                           |              | Lab: [Next Prev Binary Tree](./NextPrevTree.md) | [code](https://autograder.luddy.indiana.edu/web/project/1304), [test](https://autograder.luddy.indiana.edu/web/project/1321)
@@ -88,7 +88,7 @@ Oct. 9  | **Midterm Exam** (in class)
 Oct. 11 | **Fall Break**                                            |              | No Lab
 Oct. 14 | Binary Search Trees
 Oct. 16 | Balanced Search Trees (AVL)
-Oct. 18 |                                                           |              | Lab: [Segment Intersection](./SegmentIntersection)
+Oct. 18 |                                                           |              | Lab: [Segment Intersection](./SegmentIntersection) | [code](https://autograder.luddy.indiana.edu/web/project/1324), [test](https://autograder.luddy.indiana.edu/web/project/1322)
 Oct. 21 | Recipes for Time Analysis and Testing                     |              | Segment Intersection due
 Oct. 23 | Hash Tables
 Oct. 25 |                                                           |              | Lab: Hash Table
