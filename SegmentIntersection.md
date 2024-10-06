@@ -1,4 +1,4 @@
-# Project 2: Segment Intersection
+# Segment Intersection
 
 **[Note]** This is a group project. Students may work in groups of 3 ~ 4 people, or by themselves.
   After completion, every group member submits their solutions on Autograder <mark>individually</mark>.
