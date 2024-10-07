@@ -11,7 +11,8 @@ Topics
 * Half-open ranges
 * Testing
 * Math: log/exponent, sums, induction
-* Linked lists, Java's LinkedList
+* Logic and Deduce
+* Linked lists, Functions, Proofs
 * Abstract data types
     * interfaces
     * iterators
@@ -184,6 +185,20 @@ Here are the interfaces:
 	   return bestyet;
     }
 
+
+## Logic and Deduce
+
+What are the options for proving an `all` formula?
+
+What are the options for using an `all` formula?
+
+Ditto for a `some` formula (aka. exists)?
+
+Ditto for an `if`-`then` formula (implication)?
+
+Ditto for an `and` formula (conjunction)?
+
+Ditto for an `or` formula (conjunction)?
 
 ## Linked Lists
 
