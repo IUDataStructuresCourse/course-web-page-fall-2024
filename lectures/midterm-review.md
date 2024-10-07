@@ -5,8 +5,8 @@ Topics
 * Labs and Projects
     * Array Search
     * Flood It: time complexity, Java collection classes
-	* Merge Sort on Linked Lists
-    * Segment Intersection: BST and AVL
+	* Insertion Sort on Linked Lists with Deduce
+    * Quicksort with Iterators 
 * Arrays, array algorithms e.g. search, rotate, Java's ArrayList
 * Half-open ranges
 * Testing
@@ -16,15 +16,15 @@ Topics
     * interfaces
     * iterators
 * Time complexity
-* Binary Search Trees
-* AVL Trees (balanced BSTs)
+* Binary Trees, next and prev
+
 
 ## Big-O
 
-Def. f ∈ O(g) iff exists c k st. for all n >= k. f(n) <= c g(n)
+Def. f is asymptotically less-or-equal to g, written f ≲ g,
+iff exists c k st. for all n >= k. f(n) <= c g(n).
 
-Def. We write f ≲ g iff f ∈ O(g), and say that f is asymptotically
-less-or-equal to g.
+Def. O(g) = { f | f ≲ g }
 
 Simplest example
 
@@ -32,7 +32,7 @@ Simplest example
 
         g(n) = n²
 
-		n in O(n²)?
+        n ≲ n²? aka. n ∈ O(n²)?
 
         choose k = 0, c = 1
 
@@ -40,7 +40,7 @@ Simplest example
 
 Example that requires a more interesting choice of k.
 
-        show that n + 100 ∈ O(n^2)
+        show that n + 100 ≲ n²
 
         f(n) = n + 100
 
@@ -61,7 +61,7 @@ Example that requires a more interesting choice of k.
 
 Example that requires a more interesting choice of c.
 
-        3 * n ∈ O(n)
+        3 * n ≲ n
 
         f(n) = 3 n
 
@@ -149,129 +149,6 @@ next/previous methods
     else find ancestor that comes next wrt. inorder
 
 
-
-## Binary Search Trees
-
-Why are BST's good?
-
-The Binary-Search-Tree Property:
-For every node x in the tree,
-
-1) if node y is in the left subtree of x, then y.key ≤ x.key, and
-2) if node z is in the right subtree of x, then x.key ≤ z.key.
-
-Example tree:
-
-                     _____ 25____
-                    /            \
-                 __15__           50
-                /      \         /
-               10       22      35
-              /  \     /       / 
-             4    12  16      31 
-
-in order travel: 4, 10, 12, 15, 16, 22, 25, 31, 35, 50
-
-search
-
-insert
-
-remove
-
-## AVL Trees, balancing and rotations
-
-AVL Property: children differ in height by at most 1.
-
-Example AVL Tree:
-
-                  5 h=2
-                 / \
-            h=0 1   8 h=1
-                     \
-                      11 h=0
-
-Not an AVL tree:
-
-                  5 h=3  (node 5 breaks the AVL property)
-                 / \
-            h=0 1   8 h=2  (node 8 breaks the AVL property, -1 vs. 1)
-                     \
-                      11 h=1
-                     /
-                    9 h=0
-
-How to maintain the AVL property when inserting?
-
-insert: 10 20 30 15 12
-
-         10
-
-Insert 20:
-
-         10
-          \
-           20
-
-Insert 30:
-
-         10
-          \
-           20 h=1
-            \
-             30 h=0
-
-Node 1 is not AVL! (-1 vs 1)
-Rotate 1 to the left.
-
-           20
-          / \
-         10  30
-
-In general:
-
-                   y                  x
-                  / \    right(y)    / \
-                 x   C  -------->   A   y
-                / \     <--------      / \
-               A   B     left(x)      B   C
-
-Insert 15:
-
-           20
-          /  \
-         10   30
-          \
-           15
-
-Insert 12:
-
-           20
-          /  \
-         10   30
-          \
-           15
-           /
-          12
-
-Node 10 is not AVL! The right child is left heavy, so
-rotate child (15) to the right.
-
-           20
-          /  \
-         10   30
-          \
-           12
-            \
-             15
-
-Then rotate 10 to the left
-
-                   20
-                  / \
-                 12  30
-                /  \
-              10    15
-
 ## Maximum of a Sequence using Iterators
 
 Implement a `max` algorithm that returns the maximum element of a
@@ -310,29 +187,22 @@ Here are the interfaces:
 
 ## Linked Lists
 
-Example: 
+### Sum-Append Proof
 
-    static Node merge_in_place(Node A, Node B) {
-        if (A == null)
-            return B;
-        else if (B == null)
-            return A;
-        else if (A.data < B.data) {
-            A.next = merge_in_place(A.next, B);
-            return A;
-        } else {
-            B.next = merge_in_place(A, B.next);
-            return B;
-        }
-    }
+The sum of a list is defined as follows
 
-How would you change `merge_in_place` for a doubly-linked list?
+    sum(empty) = 0
+    sum(node(x, xs)) = x + sum(xs)
 
-    class DNode {
-	  int data;
-	  DNode next;
-	  DNode prev;
-	}
+Recall that operator ++ appends two lists together:
+
+    empty ++ ys = ys
+    node(n, xs) ++ ys = node(n, xs ++ ys)
+
+Prove that
+
+    sum(xs ++ ys) = sum(xs) + sum(ys)
+
 	
 # Sums, Induction
 

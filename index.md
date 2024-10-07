@@ -83,7 +83,7 @@ Sep. 27 |                                                           |           
 Sep. 30 | [Sorting in Linear Time](./lectures/sort-linear.md)                                              |              | Quicksort due
 Oct. 2  | [Binary Trees](./lectures/binary-trees.md)
 Oct. 4  |                                                           |              | Lab: [Next Prev Binary Tree](./NextPrevTree.md) | [code](https://autograder.luddy.indiana.edu/web/project/1304), [test](https://autograder.luddy.indiana.edu/web/project/1321)
-Oct. 7  | Review for Midterm Exam                                   |              | Next Prev Binary Tree due
+Oct. 7  | [Review for Midterm Exam](./lectures/midterm-review.md)                                   |              | Next Prev Binary Tree due
 Oct. 9  | **Midterm Exam** (in class)
 Oct. 11 | **Fall Break**                                            |              | No Lab
 Oct. 14 | Binary Search Trees
