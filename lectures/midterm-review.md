@@ -21,10 +21,10 @@ Topics
 
 ## Big-O
 
-Def. f is asymptotically less-or-equal to g, written f ≲ g,
-iff exists c k st. for all n >= k. f(n) <= c g(n).
+Def. f is asymptotically less-or-equal to g, written `f ≲ g`,
+iff `exists c k. for all n ≥ k. f(n) ≤ c g(n).`
 
-Def. O(g) = { f | f ≲ g }
+Def. `O(g) = { f | f ≲ g }`
 
 Simplest example
 
