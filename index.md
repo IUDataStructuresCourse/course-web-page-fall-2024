@@ -74,35 +74,35 @@ Sep. 9  | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([vi
 Sep. 11 | [Introduction to Deduce and Linked Lists](./lectures/deduce-programming.md)
 Sep. 13 |                                                           |              | Lab: [Linked Lists](./LabDeduceProg.md) (Quiz in Lab)
 Sep. 16 | [Writing Proofs in Deduce](./lectures/deduce-intro-proof.md)                                  |              | Lab due
-Sep. 18 | More about Proofs, Correctness of Insertion Sort 
+Sep. 18 | More about Proofs, Correctness of Insertion Sort          | Ch.7 Sec. 1-2
 Sep. 19 |                                                           |              | Homework: [Proof Exercises](https://iu.instructure.com/courses/2249383/assignments/16807557) due
 Sep. 20 |                                                           |              | [Lab: Insertion Sort](https://iu.instructure.com/courses/2249383/assignments/16808404)
-Sep. 23 | [Code Review (Flood It!)](./lectures/floodit-review.md), [Quicksort](./lectures/quicksort.md)       |              | Insertion Sort due
-Sep. 25 | [Java Interfaces](./lectures/interfaces.md)
+Sep. 23 | [Code Review (Flood It!)](./lectures/floodit-review.md), [Quicksort](./lectures/quicksort.md) | Ch.7 Sec. 7 | Insertion Sort due
+Sep. 25 | [Java Interfaces](./lectures/interfaces.md)               | Ch. 3
 Sep. 27 |                                                           |              | Lab: [Quicksort](./QuickSort) | [code](https://autograder.luddy.indiana.edu/web/project/1304), [test](https://autograder.luddy.indiana.edu/web/project/1316)
-Sep. 30 | [Sorting in Linear Time](./lectures/sort-linear.md)                                              |              | Quicksort due
-Oct. 2  | [Binary Trees](./lectures/binary-trees.md)
+Sep. 30 | [Sorting in Linear Time](./lectures/sort-linear.md)       | Ch. 7 Sec. 11| Quicksort due
+Oct. 2  | [Binary Trees](./lectures/binary-trees.md)                | Ch. 4 Sec. 1-2
 Oct. 4  |                                                           |              | Lab: [Next Prev Binary Tree](./NextPrevTree.md) | [code](https://autograder.luddy.indiana.edu/web/project/1290), [test](https://autograder.luddy.indiana.edu/web/project/1321)
 Oct. 7  | [Review for Midterm Exam](./lectures/midterm-review.md)   |              | Next Prev Binary Tree due
 Oct. 9  | **Midterm Exam** (in class)
 Oct. 11 | **Fall Break**                                            |              | No Lab
-Oct. 14 | [Binary Search Trees](./lectures/binary-search-trees.md)
-Oct. 16 | Balanced Search Trees (AVL)
+Oct. 14 | [Binary Search Trees](./lectures/binary-search-trees.md)  | Ch. 4 Sec. 3
+Oct. 16 | Balanced Search Trees (AVL)                               | Ch. 4 Sec. 4
 Oct. 18 |                                                           |              | Lab: [Segment Intersection](./SegmentIntersection) | [code](https://autograder.luddy.indiana.edu/web/project/1324), [test](https://autograder.luddy.indiana.edu/web/project/1322)
 Oct. 21 | Recipes for Time Analysis and Testing                     |              | Segment Intersection due
-Oct. 23 | Hash Tables
+Oct. 23 | Hash Tables                                               | Ch. 5 sec.1-6
 Oct. 25 |                                                           |              | Lab: Hash Table
-Oct. 28 | Heaps and Priority Queues                                 |              | Hash Table due
+Oct. 28 | Heaps and Priority Queues                                 | Ch. 6 sec. 1-4,9 | Hash Table due
 Oct. 30 | Code Review (Segment Intersection)
 Nov. 1  |                                                           |              | Lab: Huffman Coding (Heap Implementation)
-Nov. 4  | Graphs and Breadth-first Search                           |              | Huffman Coding due
-Nov. 6  | Depth-first Search
+Nov. 4  | Graphs and Breadth-first Search                           | Ch. 9, sec. 1,3 | Huffman Coding due
+Nov. 6  | Depth-first Search                                        | Ch. 9 sec. 6
 Nov. 8  |                                                           |              | Lab: Connected Components
-Nov. 11 | Shortest Paths                                            |              | Connected Components due
-Nov. 13 | Union Find
+Nov. 11 | Shortest Paths                                            | Ch. 9 sec. 3 | Connected Components due
+Nov. 13 | Union Find                                                | Ch. 8
 Nov. 15 |                                                           |              | Project: Routing Wires
-Nov. 18 | Minimum Spanning Tree
-Nov. 20 | Dynamic Programming
+Nov. 18 | Minimum Spanning Tree                                     | Ch. 9 sec. 5
+Nov. 20 | Dynamic Programming                                       | Ch. 10, sec. 3
 Nov. 22 |                                                           |              | Project: Routing Wires, cont'd
 Nov. 24 - Dec. 1 | **Thanksgiving Break**
 Dec. 2 | DNA Alignment                                              |              | Routing Wires due
