@@ -4,16 +4,14 @@
     public Node<K> insert(K key) {
         Node<K> n = find(key, root, null);
         if (n == null){
-            root = new Node<K>(key);
+            root = new Node<K>(key, null, null);
             return root;
         } else if (lessThan.test(key, n.data)) {
-            Node<K> x = new Node<K>(key);
-            n.left = x;
-            return x;
+            n.left = new Node<K>(key, null, null);
+            return n.left;
         }  else if (lessThan.test(n.data, key)) {
-            Node<K> x = new Node<K>(key);
-            n.right = x;
-            return x;
+            n.right = new Node<K>(key, null, null);
+            return n.right;
         } else
             return null;
     }

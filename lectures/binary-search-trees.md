@@ -71,7 +71,7 @@ Example: Search for 6, 9, 15 in the following tree:
 ```
 
 The `find()` method looks for the node with the specified key; if there is none,
-the parent of where such a node would be.
+it returns the parent of where such a node would be.
 
 ```java
 protected Node<K> find(K key, Node<K> curr, Node<K> parent) {
@@ -87,7 +87,7 @@ protected Node<K> find(K key, Node<K> curr, Node<K> parent) {
 ```
 
 The `search()` method looks for the specified key and returns the node
-if the key is found.
+if the key is found and otherwise returns `null`.
 
 ```java
 public Node<K> search(K key) {
@@ -114,7 +114,7 @@ What is the time complexity? O(h), where h is the height of the tree.
 
 ## `insert` method of `BinarySearchTree`
 
-Book 4.3.3.
+Textbook 4.3.3.
 
 Similarly we can perform insertions on BSTs. The `insert()` method
 adds the given key to the tree.
@@ -156,16 +156,18 @@ Fill in the blanks:
 public Node<K> insert(K key) {
 	Node<K> n = find(key, root, null);
 	if (n == null){
-		root = new Node<K>(key, null, null);
-		return root;
+		
+		
 	} else if (lessThan.test(key, n.data)) {
-		n.left = new Node<K>(key, null, null);
-		return n.left;
+		
+		
 	}  else if (lessThan.test(n.data, key)) {
-		n.right = new Node<K>(key, null, null);
-		return n.right;
-	} else
-		return null; // duplicate, no insert
+		
+		
+	} else {
+		
+        
+    }
 }
 ```
 
