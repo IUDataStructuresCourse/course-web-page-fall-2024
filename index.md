@@ -86,7 +86,7 @@ Oct. 4  |                                                           |           
 Oct. 7  | [Review for Midterm Exam](./lectures/midterm-review.md)   |              | Next Prev Binary Tree due
 Oct. 9  | **Midterm Exam** (in class)
 Oct. 11 | **Fall Break**                                            |              | No Lab
-Oct. 14 | Binary Search Trees
+Oct. 14 | [Binary Search Trees](./lectures/binary-search-trees.md)
 Oct. 16 | Balanced Search Trees (AVL)
 Oct. 18 |                                                           |              | Lab: [Segment Intersection](./SegmentIntersection) | [code](https://autograder.luddy.indiana.edu/web/project/1324), [test](https://autograder.luddy.indiana.edu/web/project/1322)
 Oct. 21 | Recipes for Time Analysis and Testing                     |              | Segment Intersection due
