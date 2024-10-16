@@ -8,19 +8,21 @@ Overview:
 
 ## Introduce the Segment Intersection Project. Demo the solution.
 
+There is a standard algorithm for testing whether 2 segments intersect
+and its time complexity is O(1).
+
 Given a set of n segments, are their any pairs that intersect?
-
-Suppose we have a routine for testing whether 2 segments intersect.
-
-Simplifications:
-
-* No vertical segments
-* No three-way (or more) intersections
 
 Brute force: test all combinations O(n²)
 
 A better algorithm: Line Sweep
 
+Requires pre-processing to ensure that:
+
+* No vertical segments
+* No three-way (or more) intersections
+
+Line Sweep ALgorithm:
 * Sort all the end-points of the line segments from left to
   right (x-axis)
 * Move the line sweep from left to right, stopping at each end point.
@@ -275,8 +277,8 @@ Insert 11:
     3[0]     8[2]
              /  \
           7[0]   10[1]
-         			 \
-		         	  11[0]
+                     \
+                      11[0]
 
 
 ### Student question
