@@ -87,7 +87,7 @@ Oct. 7  | [Review for Midterm Exam](./lectures/midterm-review.md)   |           
 Oct. 9  | **Midterm Exam** (in class)
 Oct. 11 | **Fall Break**                                            |              | No Lab
 Oct. 14 | [Binary Search Trees](./lectures/binary-search-trees.md)  | Ch. 4 Sec. 3
-Oct. 16 | Balanced Search Trees (AVL)                               | Ch. 4 Sec. 4
+Oct. 16 | [Balanced Search Trees (AVL)](./lectures/balanced-search-trees.md)                               | Ch. 4 Sec. 4
 Oct. 18 |                                                           |              | Lab: [Segment Intersection](./SegmentIntersection) | [code](https://autograder.luddy.indiana.edu/web/project/1324), [test](https://autograder.luddy.indiana.edu/web/project/1322)
 Oct. 21 | Recipes for Time Analysis and Testing                     |              | Segment Intersection due
 Oct. 23 | Hash Tables                                               | Ch. 5 sec.1-6
