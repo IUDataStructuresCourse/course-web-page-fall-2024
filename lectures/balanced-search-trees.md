@@ -465,7 +465,7 @@ the tree (because there can be several AVL violations).
                    / \          left_rotate(x)          / \
                ≤k A   y k+1     ===============>  ≤k+1 x   C k
                      / \                              / \
-                ≤k B   C k                      ≤k A   B ≤k
+                 ≤k B   C k                       ≤k A   B ≤k
 
     2. if height(x.right.left) > height(x.right.right)
 
