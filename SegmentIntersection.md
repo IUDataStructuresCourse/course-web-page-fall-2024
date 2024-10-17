@@ -101,7 +101,7 @@ Implement all of the methods marked `TODO` according to their descriptions
 in the comments. **DO NOT** change their function signatures.
 
 The `BinarySearchTree` class is an elaboration of the class described in
-lecture and that you used in [Lab 4](./lab4).
+lecture and that you used in the [NextPrevTree Lab](./NextPrevTree.html).
 The `AVLTree` class is a subclass of `BinarySeachTree` and
 overrides the `insert()` and `remove()` methods to ensure that the tree remains
 balanced at all times (which gives us the $O(log(n)$) time bound we crave).
