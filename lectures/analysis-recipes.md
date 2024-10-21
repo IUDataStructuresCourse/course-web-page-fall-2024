@@ -24,12 +24,12 @@ Example:
                             LinkedList<Coord> flooded_list,
                             Tile[][] tiles, Integer board_size) {
         HashSet<Coord> flooded = new HashSet<>(flooded_list);   // O(n)
-        for (int i = 0; i != flooded_list.size(); ++i) { ... }  // O(n^2)
+        for (int i = 0; i != flooded_list.size(); ++i) { ... }  // O(n²)
     }
 
 The construction of the `flooded` HashSet is O(n).
-The `for` loop is O(n^2).
-Adding those together yields O(n^2).
+The `for` loop is O(n²).
+Adding those together yields O(n²).
 
 
 ## If-Then-Else Statements
@@ -56,7 +56,7 @@ The time of the condition `A_orig.length < 2` is O(1).
 The time of the then-branch `Arrays.equals(A_orig, A_new)` is O(n).
 The time of the else-branch is O(n) (we shall discuss loops below).
 
-So the time of the `if-then-else` is O(1) + O(n) + O(n) = O(n)
+So the time of this `if-then-else` is O(1) + O(n) + O(n) = O(n)
 
 ## If-Then Statements
 
@@ -110,15 +110,15 @@ Recipe:
 To determine `recursion_depth`, analyze how much the input size changes
 in the recursive calls.
 * If size gets smaller by 1 (or any constant amount), recursion depth is O(n).
-* If size get divided in half (or more), recursion depth is O(log n).
+* If size get divided in half (or any fraction), recursion depth is O(log n).
 
 To determine the `time_per_level`:
 
     time_per_level = number_calls_per_level (not big-O) * time_per_call
 
-To determine `number_calls` occuring within each level, one needs to
-analyze the code to see how many recursive calls can be spawned by one
-call to the recursive function.
+To determine `number_calls_per_Level`, one needs to analyze the code
+to see how many recursive calls can be spawned by one call to the
+recursive function.
 
 To determine `time_per_call`, analyze the time complexity of one call
 to the recursive function, **ignoring the recursive calls**.
@@ -131,7 +131,7 @@ but in many examples, these two affects cancel out and the
 time per level stays the same. (If not, one needs to use a more
 advanced analysis called the Master Theorem.)
 
-Example:
+### Append Example
 
     static Node append(Node N1, Node N2) {
         if (N1 == null)
@@ -153,7 +153,7 @@ analysis:
 
 * `time_of_function` = `recursion_depth` * `time_per_level` = O(n) * O(1) = O(n)
 
-Example:
+### Binary Search Tree Example
 
 Assume the tree is AVL, so it is balanced.
 
@@ -182,7 +182,19 @@ analysis:
 * `time_of_function` = `recursion_depth` * `time_per_level` 
    = O(log(n)) * O(1) = O(log(n))
 
-Example:
+### Merge Sort Example
+
+    static Node merge(Node A, Node B) {
+        if (A == null) {
+            return B;
+        } else if (B == null) {
+            return A;
+        } else if (A.data <= B.data) {
+            return new Node(A.data, merge(A.next, B));
+        } else {
+            return new Node(B.data, merge(A, B.next));
+        }
+    }
 
     static Node merge_sort(Node N) {
         if (N == null || N.next == null) {
