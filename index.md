@@ -90,9 +90,9 @@ Oct. 14 | [Binary Search Trees](./lectures/binary-search-trees.md)  | Ch. 4 Sec.
 Oct. 16 | [Balanced Search Trees (AVL)](./lectures/balanced-search-trees.md)                               | Ch. 4 Sec. 4
 Oct. 18 |                                                           |              | Lab: [Segment Intersection](./SegmentIntersection) | [code](https://autograder.luddy.indiana.edu/web/project/1324), [test](https://autograder.luddy.indiana.edu/web/project/1322)
 Oct. 21 | [Recipes for Time Analysis](./lectures/analysis-recipes.md)                     |              | Segment Intersection due
-Oct. 23 | [Hash Tables](./lectures/hash-tables.md)                                               | Ch. 5 sec.1-6
+Oct. 23 | [Hash Tables](./lectures/hash-tables.md)                  | Ch. 5 sec.1-6
 Oct. 25 |                                                           |              | Lab: [Hash Table](./LabHashTable.md) | [code](https://autograder.luddy.indiana.edu/web/project/1293), [test](https://autograder.luddy.indiana.edu/web/project/1313)
-Oct. 28 | Heaps and Priority Queues                                 | Ch. 6 sec. 1-4,9 | Hash Table due
+Oct. 28 | [Heaps and Priority Queues](./lectures/heaps.md)          | Ch. 6 sec. 1-4,9 | Hash Table due
 Oct. 30 | Code Review (Segment Intersection)
 Nov. 1  |                                                           |              | Lab: Huffman Coding (Heap Implementation)
 Nov. 4  | Graphs and Breadth-first Search                           | Ch. 9, sec. 1,3 | Huffman Coding due

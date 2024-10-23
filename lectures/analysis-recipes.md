@@ -3,7 +3,7 @@
 ## Simple Statements
 
 * Most are O(1)
-* Some can be more expensive: method and function calls, object constructors.
+* Some can be more expensive: method and function calls, object constructors (`new`).
     1. If the method is a standard one (`get` on `LinkedList`), lookup up the
       time complexity.
     2. If you have access to the code for the method, analyze the code.
@@ -82,11 +82,11 @@ time of `for` loop is O(n) * O(1) = O(n)
 
 Example (nested loops):
 
-    int i = n;
-    while (i > 0) {
-        for (int j = 0; j < n; j++)
-            System.out.println("*");
-        i = i / 2;
+    int i = n; // O(1)
+    while (i > 0) { // log n iterations * O(n) = O(n log n)
+        for (int j = 0; j < n; j++)  // n iterations * O(1) = O(n)
+            System.out.println("*"); // O(1)
+        i = i / 2;                   // O(1)
     }
 
 number of iterations of `while` loop is O(log(n))
@@ -100,6 +100,7 @@ time of `for` loop is O(n) * O(1) = O(n)
 
 time of `while` loop is O(log(n)) * O(n) = O(n log(n))
 
+total: O(n log(n))
 
 ## Recursive Functions
 
@@ -115,8 +116,9 @@ in the recursive calls.
 To determine the `time_per_level`:
 
     time_per_level = number_calls_per_level (not big-O) * time_per_call
+    (do this for each level if the amount changes on each level)
 
-To determine `number_calls_per_Level`, one needs to analyze the code
+To determine `number_calls_per_level`, one needs to analyze the code
 to see how many recursive calls can be spawned by one call to the
 recursive function.
 
@@ -146,7 +148,14 @@ analysis:
 * `recursion_depth` = O(n), input size reduced by one: `append(N1.next, N2)`
 
 * `number_calls_per_level` = 1 (only one call to append)
-    
+
+   append(L)
+   |
+   append(L.next)
+   |
+   append(L.next.next)
+
+
 * `time_per_call` = O(1)  (allocate one node)
 
 * `time_per_level` = `number_calls_per_level` * `time_per_call` = O(1)
@@ -200,10 +209,10 @@ analysis:
         if (N == null || N.next == null) {
             return N;
         } else {
-            int n = Utils.length(N);
-            Node left = merge_sort(Utils.take(N, n / 2));
-            Node right = merge_sort(Utils.drop(N, n / 2));
-            return merge(left, right);
+            int n = Utils.length(N); // O(n)
+            Node left = merge_sort(Utils.take(N, n / 2)); // take: O(n)
+            Node right = merge_sort(Utils.drop(N, n / 2)); // drop: O(n)
+            return merge(left, right); // O(n)
         }
     }
 
@@ -222,3 +231,31 @@ analysis:
 
 * `time_of_function` = `recursion_depth` * `time_per_level` 
    = O(log(n)) * O(n) = O(n log(n))
+
+## Insertion Sort
+
+    function insert(List<Nat>,Nat) -> List<Nat> {
+      insert(empty, x) = node(x, empty)
+      insert(node(y, next), x) =
+        if x ≤ y then
+          node(x, node(y, next))
+        else
+          node(y, insert(next, x))
+    }
+
+    function insertion_sort(List<Nat>) -> List<Nat> {
+      insertion_sort(empty) = empty
+      insertion_sort(node(x, xs')) = insert(insertion_sort(xs'), x)
+    }
+
+
+time = recursion depth * time per level
+       n * 
+
+time per level = # calls  *   time inside insertion_sort
+                     1             O(n)
+
+level 1:    insertion_sort(L)
+level 2:    insertion_sort(L)
+...
+level n:    insertion_sort(L)
