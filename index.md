@@ -97,7 +97,7 @@ Oct. 30 | Code Review (Segment Intersection)
 Nov. 1  |                                                           |              | Lab: Huffman Coding (Heap Implementation)
 Nov. 4  | Graphs and Breadth-first Search                           | Ch. 9, sec. 1,3 | Huffman Coding due
 Nov. 6  | Depth-first Search                                        | Ch. 9 sec. 6
-Nov. 8  |                                                           |              | Lab: Connected Components
+Nov. 8  |                                                           |              | Lab: [Connected Components](./ConnectedComponents.md)
 Nov. 11 | Shortest Paths                                            | Ch. 9 sec. 3 | Connected Components due
 Nov. 13 | Union Find                                                | Ch. 8
 Nov. 15 |                                                           |              | Project: Routing Wires
