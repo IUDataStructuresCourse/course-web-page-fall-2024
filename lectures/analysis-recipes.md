@@ -1,16 +1,9 @@
-
-Lecture Overview
-
-* Recipes for time complexity analysis
-* Testing checklist
-
-
 # Time Complexity Analysis Recipes
 
 ## Simple Statements
 
 * Most are O(1)
-* Some can be more expensive: method and function calls, object constructors.
+* Some can be more expensive: method and function calls, object constructors (`new`).
     1. If the method is a standard one (`get` on `LinkedList`), lookup up the
       time complexity.
     2. If you have access to the code for the method, analyze the code.
@@ -31,12 +24,12 @@ Example:
                             LinkedList<Coord> flooded_list,
                             Tile[][] tiles, Integer board_size) {
         HashSet<Coord> flooded = new HashSet<>(flooded_list);   // O(n)
-        for (int i = 0; i != flooded_list.size(); ++i) { ... }  // O(n^2)
+        for (int i = 0; i != flooded_list.size(); ++i) { ... }  // O(n²)
     }
 
 The construction of the `flooded` HashSet is O(n).
-The `for` loop is O(n^2).
-Adding those together yields O(n^2).
+The `for` loop is O(n²).
+Adding those together yields O(n²).
 
 
 ## If-Then-Else Statements
@@ -63,7 +56,7 @@ The time of the condition `A_orig.length < 2` is O(1).
 The time of the then-branch `Arrays.equals(A_orig, A_new)` is O(n).
 The time of the else-branch is O(n) (we shall discuss loops below).
 
-So the time of the `if-then-else` is O(1) + O(n) + O(n) = O(n)
+So the time of this `if-then-else` is O(1) + O(n) + O(n) = O(n)
 
 ## If-Then Statements
 
@@ -89,11 +82,11 @@ time of `for` loop is O(n) * O(1) = O(n)
 
 Example (nested loops):
 
-    int i = n;
-    while (i > 0) {
-        for (int j = 0; j < n; j++)
-            System.out.println("*");
-        i = i / 2;
+    int i = n; // O(1)
+    while (i > 0) { // log n iterations * O(n) = O(n log n)
+        for (int j = 0; j < n; j++)  // n iterations * O(1) = O(n)
+            System.out.println("*"); // O(1)
+        i = i / 2;                   // O(1)
     }
 
 number of iterations of `while` loop is O(log(n))
@@ -107,6 +100,7 @@ time of `for` loop is O(n) * O(1) = O(n)
 
 time of `while` loop is O(log(n)) * O(n) = O(n log(n))
 
+total: O(n log(n))
 
 ## Recursive Functions
 
@@ -117,15 +111,16 @@ Recipe:
 To determine `recursion_depth`, analyze how much the input size changes
 in the recursive calls.
 * If size gets smaller by 1 (or any constant amount), recursion depth is O(n).
-* If size get divided in half (or more), recursion depth is O(log n).
+* If size get divided in half (or any fraction), recursion depth is O(log n).
 
 To determine the `time_per_level`:
 
     time_per_level = number_calls_per_level (not big-O) * time_per_call
+    (do this for each level if the amount changes on each level)
 
-To determine `number_calls` occuring within each level, one needs to
-analyze the code to see how many recursive calls can be spawned by one
-call to the recursive function.
+To determine `number_calls_per_level`, one needs to analyze the code
+to see how many recursive calls can be spawned by one call to the
+recursive function.
 
 To determine `time_per_call`, analyze the time complexity of one call
 to the recursive function, **ignoring the recursive calls**.
@@ -138,7 +133,7 @@ but in many examples, these two affects cancel out and the
 time per level stays the same. (If not, one needs to use a more
 advanced analysis called the Master Theorem.)
 
-Example:
+### Append Example
 
     static Node append(Node N1, Node N2) {
         if (N1 == null)
@@ -153,14 +148,21 @@ analysis:
 * `recursion_depth` = O(n), input size reduced by one: `append(N1.next, N2)`
 
 * `number_calls_per_level` = 1 (only one call to append)
-    
+
+   append(L)
+   |
+   append(L.next)
+   |
+   append(L.next.next)
+
+
 * `time_per_call` = O(1)  (allocate one node)
 
 * `time_per_level` = `number_calls_per_level` * `time_per_call` = O(1)
 
 * `time_of_function` = `recursion_depth` * `time_per_level` = O(n) * O(1) = O(n)
 
-Example:
+### Binary Search Tree Example
 
 Assume the tree is AVL, so it is balanced.
 
@@ -189,16 +191,28 @@ analysis:
 * `time_of_function` = `recursion_depth` * `time_per_level` 
    = O(log(n)) * O(1) = O(log(n))
 
-Example:
+### Merge Sort Example
+
+    static Node merge(Node A, Node B) {
+        if (A == null) {
+            return B;
+        } else if (B == null) {
+            return A;
+        } else if (A.data <= B.data) {
+            return new Node(A.data, merge(A.next, B));
+        } else {
+            return new Node(B.data, merge(A, B.next));
+        }
+    }
 
     static Node merge_sort(Node N) {
         if (N == null || N.next == null) {
             return N;
         } else {
-            int n = Utils.length(N);
-            Node left = merge_sort(Utils.take(N, n / 2));
-            Node right = merge_sort(Utils.drop(N, n / 2));
-            return merge(left, right);
+            int n = Utils.length(N); // O(n)
+            Node left = merge_sort(Utils.take(N, n / 2)); // take: O(n)
+            Node right = merge_sort(Utils.drop(N, n / 2)); // drop: O(n)
+            return merge(left, right); // O(n)
         }
     }
 
@@ -218,90 +232,30 @@ analysis:
 * `time_of_function` = `recursion_depth` * `time_per_level` 
    = O(log(n)) * O(n) = O(n log(n))
 
+## Insertion Sort
 
-# Testing Checklist
-
-1. common cases (find in lecture, textbook, internet)
-2. corner cases
-3. code coverage -> more cases
-4. big, randomized input
-
-Let's go through some of the autograder's tests for the
-`MergeSortList` and `NextPrevBinaryTree` labs.
-
-## Common Case Test for `merge`
-
-    @Test
-    public void merge_small() {
-        int[] A = {1,3,4,6,8,8,12,13};
-        int[] B = {2,4,5,7,9,11,14};
-        Node N1 = Utils.array_to_list(A);
-        Node N2 = Utils.array_to_list(B);
-        Node M = MergeSort.merge(N1, N2);
-        assertArrayEquals(A, Utils.list_to_array(N1));
-        assertArrayEquals(B, Utils.list_to_array(N2));
-        assertTrue(Utils.is_sorted(M));
-        assertTrue(Utils.is_permutation(M, Utils.append(N1, N2)));
+    function insert(List<Nat>,Nat) -> List<Nat> {
+      insert(empty, x) = node(x, empty)
+      insert(node(y, next), x) =
+        if x ≤ y then
+          node(x, node(y, next))
+        else
+          node(y, insert(next, x))
     }
 
-## Common Case Test for `merge_in_place`
-
-    @Test
-    public void merge_in_place() {
-        int[] A = {1,3,4,6,8,8,12,13};
-        int[] B = {2,4,5,7,9,11,14};
-        Node N1 = Utils.array_to_list(A);
-        Node N2 = Utils.array_to_list(B);
-        Node M = MergeSort.merge_in_place(N1, N2);
-        assertTrue(Utils.is_sorted(M));
-        assertTrue(Utils.is_permutation(M, Utils.append(Utils.array_to_list(A),
-                                                 Utils.array_to_list(B))));
-        // Check that the merge was done in place.
-        assertTrue(Utils.equals(M, N1));
+    function insertion_sort(List<Nat>) -> List<Nat> {
+      insertion_sort(empty) = empty
+      insertion_sort(node(x, xs')) = insert(insertion_sort(xs'), x)
     }
 
-## Big, Randomized Test for merge `sort`
 
-    @Test
-    public void sort_big() {
-        Random r = new Random(0);
-        for (int n = 0; n != 100; ++n) {
-            int[] A = new int[n];
-            for (int i = 0; i != n; ++i)
-                A[i] = r.nextInt(50);
-            Node N = Utils.array_to_list(A);
-            Arrays.sort(A);
-            N = MergeSort.sort(N);
-            int[] B = Utils.list_to_array(N);
-            assertArrayEquals(A, B);
-        }
-    }
+time = recursion depth * time per level
+       n * 
 
-## Common and Big Tests for BinaryTree Iterator
+time per level = # calls  *   time inside insertion_sort
+                     1             O(n)
 
-    private void test_next_helper(ArrayList<Integer> expected,
-                                  BinaryTree<Integer> T) {
-        int j = 0;
-        for (Iterator<Integer> i = T.begin(); !i.equals(T.end()); i.advance()) {
-            assertTrue(j != expected.size()); // to catch error in Iter.equals
-            assertEquals(expected.get(j).intValue(), i.get().intValue());
-            ++j;
-        }
-    }
-
-    public void test_advance() throws Exception {
-        Integer expected[] = {2, 5, 5, 6, 7, 8};
-        test_next_helper(new ArrayList<Integer>(Arrays.asList(expected)), T);
-    }
-
-    @Test
-    public void test_advance_big() throws Exception {
-        Random r = new Random(0);
-        for (int n = 0; n != 100; ++n) {
-            ArrayList<Integer> expected = new ArrayList<>();
-            for (int i = 0; i != n; ++i)
-                expected.add(r.nextInt(100));
-            BinaryTree<Integer> bigT = new BinaryTree<>(expected);
-            test_next_helper(expected, bigT);
-        }
-    }
+level 1:    insertion_sort(L)
+level 2:    insertion_sort(L)
+...
+level n:    insertion_sort(L)
