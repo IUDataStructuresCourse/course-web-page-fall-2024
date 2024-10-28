@@ -18,18 +18,18 @@ A **complete binary tree** is a binary tree in which every level, except
 possibly the last, is filled. Here are some examples:
 
         o         _o_            _o_          o
-	   / \       /   \          /   \        /
-	  o   o     o     o        o     o      o
-	           / \   / \      / \
-		      o   o o   o    o   o
+       / \       /   \          /   \        /
+      o   o     o     o        o     o      o
+               / \   / \      / \
+              o   o o   o    o   o
 
 Non example
 
               o
-		    /   \
-		   o     o
-		  /     /
-	     o     o 
+            /   \
+           o     o
+          /     /
+         o     o 
 
 
 Def. A **max heap** is a complete binary tree in which for every node
@@ -256,7 +256,7 @@ property with `max_heapify`.
     }
     
 Time complexity: O(log n)
-	
+    
 ## `sortInPlace` method
 
 Idea: swap the max (the root) with the last element, call `max_heapify`, 
