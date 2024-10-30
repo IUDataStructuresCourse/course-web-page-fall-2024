@@ -1,4 +1,4 @@
-# Lab: Huffman Codeing
+# Lab: Huffman Coding
 
 ## Background and Overview
 
