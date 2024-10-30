@@ -13,8 +13,48 @@ The lab is to finish a `Heap` class
 
 ## Problem Set
 
-### Problem 1: Tree Traversal
+### Problem 1: Heap Implementation
 
+  #### Heap(Comparator<E> comparator) 
+
+  
+  
+  #### peek()
+
+  Returns the top of this heap. This will be the highest priority key.
+  
+  @throws NoSuchElementException if the heap is empty.
+
+
+  #### insert(E key) 
+
+
+  
+  #### delete() 
+
+  Removes and returns the highest priority key in this heap.
+
+  @throws NoSuchElementException if the heap is empty.
+  
+  #### swap(int i, int j) 
+
+  Exchanges the elements in the heap at the given indices in keys.
+  
+  #### size()
+
+  Returns the number of keys in this heap.
+  
+  #### getLeft(int p)
+  
+  Returns the index of the left child of p.
+
+  #### getRight(int p)
+
+  Returns the index of the right child of p.
+  
+  #### getParent(int p) 
+  
+  Returns the index of the parent of p.
 
 ### Problem 2: Testing
 
