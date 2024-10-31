@@ -7,53 +7,67 @@ The lab is to finish a `Heap` class
 ## Support Code and Submission
 
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/HuffmanCoding-student-support-code/).
-+ Submit your code file `Heap.java` [link](https://autograder.luddy.indiana.edu/web/project/1310).
-+ Submit your test file `StudentTest.java` [link](https://autograder.luddy.indiana.edu/web/project/1317).
++ Submit your code file `Heap.java` [link](https://autograder.luddy.indiana.edu/web/project/1412).
++ Submit your test file `StudentTest.java` [link](https://autograder.luddy.indiana.edu/web/project/1413).
 
 
 ## Problem Set
 
 ### Problem 1: Heap Implementation
 
-  #### Heap(Comparator<E> comparator) 
+  ```java
+  Heap(Comparator<E> comparator) 
+  ```
 
   
   
-  #### peek()
+  ```java
+  peek()
+  ```
 
-  Returns the top of this heap. This will be the highest priority key.
+  Returns the top of this heap. This will be the highest priority key. This method should throw a `NoSuchElementException` if the heap is empty.
+
+
+  ```java
+  insert(E key) 
+  ```
+  Adds a key to the heap, maintaining the heap invariant, placing it in the correct priority order.
+
   
-  @throws NoSuchElementException if the heap is empty.
+  ```java
+  delete() 
+  ```
 
-
-  #### insert(E key) 
-
-
+  Removes and returns the highest priority key in this heap.   This method should throw a `NoSuchElementException` if the heap is empty.
   
-  #### delete() 
-
-  Removes and returns the highest priority key in this heap.
-
-  @throws NoSuchElementException if the heap is empty.
-  
-  #### swap(int i, int j) 
+  ```java
+  swap(int i, int j) 
+  ```
 
   Exchanges the elements in the heap at the given indices in keys.
   
-  #### size()
+  ```java
+  size()
+  ```
 
   Returns the number of keys in this heap.
   
-  #### getLeft(int p)
-  
+  ```java
+  getLeft(int p)
+  ```
+
   Returns the index of the left child of p.
 
-  #### getRight(int p)
+  ```java
+  getRight(int p)
+  ```
 
   Returns the index of the right child of p.
   
-  #### getParent(int p) 
-  
+  ```java
+  getParent(int p) 
+  ```
+
   Returns the index of the parent of p.
 
 ### Problem 2: Testing
