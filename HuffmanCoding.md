@@ -15,11 +15,15 @@ The lab is to finish a `Heap` class
 
 ### Problem 1: Heap Implementation
 
+  Your task is to implement the Heap class by completeing the following methods:
+
   ```java
   Heap(Comparator<E> comparator) 
   ```
-
   
+  The heap constructor containing the keys and comparator.  
+  
+
   
   ```java
   peek()
@@ -28,10 +32,14 @@ The lab is to finish a `Heap` class
   Returns the top of this heap. This will be the highest priority key. This method should throw a `NoSuchElementException` if the heap is empty.
 
 
+
+
   ```java
   insert(E key) 
   ```
+
   Adds a key to the heap, maintaining the heap invariant, placing it in the correct priority order.
+
 
   
   ```java
@@ -39,18 +47,24 @@ The lab is to finish a `Heap` class
   ```
 
   Removes and returns the highest priority key in this heap.   This method should throw a `NoSuchElementException` if the heap is empty.
+
+
   
   ```java
   swap(int i, int j) 
   ```
 
   Exchanges the elements in the heap at the given indices in keys.
+
+
   
   ```java
   size()
   ```
 
   Returns the number of keys in this heap.
+
+
   
   ```java
   getLeft(int p)
@@ -58,17 +72,23 @@ The lab is to finish a `Heap` class
 
   Returns the index of the left child of p.
 
+
+
   ```java
   getRight(int p)
   ```
 
   Returns the index of the right child of p.
+
+
   
   ```java
   getParent(int p) 
   ```
 
   Returns the index of the parent of p.
+
+
 
 ### Problem 2: Testing
 
