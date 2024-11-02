@@ -100,7 +100,7 @@ Nov. 6  | Depth-first Search                                        | Ch. 9 sec.
 Nov. 8  |                                                           |              | Lab: [Connected Components](./ConnectedComponents.md)
 Nov. 11 | Shortest Paths                                            | Ch. 9 sec. 3 | Connected Components due
 Nov. 13 | Union Find                                                | Ch. 8
-Nov. 15 |                                                           |              | Project: Routing Wires
+Nov. 15 |                                                           |              | Project: [Routing Wires](./RoutingWires)
 Nov. 18 | Minimum Spanning Tree                                     | Ch. 9 sec. 5
 Nov. 20 | Dynamic Programming                                       | Ch. 10, sec. 3
 Nov. 22 |                                                           |              | Project: Routing Wires, cont'd
