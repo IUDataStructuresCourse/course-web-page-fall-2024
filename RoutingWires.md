@@ -1,6 +1,6 @@
-# Project 3: Routing Wires on a Chip
+# Project: Routing Wires on a Chip
 
-**[Note]** This is a group project. Students work in groups of 3 ~ 4 people.
+**[Note]** This is a group project. Students may work in groups of 3 ~ 4 people.
   After completion, Every group member submits their solutions on Autograder <mark>individually</mark>.
 
 ## Project Description
@@ -72,7 +72,7 @@ Note that a path can have the same source and destination points.
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/routing-wires-student-support-code).
   Please make sure to go through existing code before you start.
 + Submit your code file `Routing.java` and write-up file `README.md` to
-  [link](https://autograder.luddy.indiana.edu/web/project/933).
+  [link](https://autograder.luddy.indiana.edu/web/project/1311).
 
 ## Programming Task
 
@@ -116,4 +116,4 @@ but you may use other justifications.
 
 -----------------
 
-* You have finally reached the end of Project 3. Congratulations!
+* You have finally reached the end of the Project. Congratulations!
