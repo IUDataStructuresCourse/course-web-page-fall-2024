@@ -21,18 +21,18 @@ The lab is to finish a `Heap` class
   
   #### peek()
 
-  Returns the top of this heap. This will be the highest priority key.
+  Returns the top of this heap. This will be the lowest priority key.
   
   @throws NoSuchElementException if the heap is empty.
 
 
-  #### insert(E key) 
+  #### push(E key) 
 
 
   
-  #### delete() 
+  #### pop() 
 
-  Removes and returns the highest priority key in this heap.
+  Removes and returns the lowset priority key in this heap.
 
   @throws NoSuchElementException if the heap is empty.
   
