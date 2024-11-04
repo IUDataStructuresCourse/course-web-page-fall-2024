@@ -14,7 +14,7 @@ edges.
 
 The following is an example of a directed graph.
 
-<img caption="Example of a directed graph." src="./digraph1.png" width="50pt">
+![**Example of a directed graph.**](./digraph1.png)
 
 The set of vertices for this graph is 
 
