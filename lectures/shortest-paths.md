@@ -42,47 +42,15 @@ Here's a worst-case scenario.
 ![**Graph with an exponential number of paths.**](./digraph11.png)
 
 
-## Shortest paths exhibit *optimal substructure*
-
-That is, a subpath of a shortest path is a shortest path.
-
-More precisely, if you have a shortest path
-
-v₀ →ᵣ vᵢ →p vⱼ →q vk
-
-then the subpath p
-
-vᵢ →p vⱼ
-
-is a shortest path from vᵢ to vⱼ.
-
-Proof. Suppose vᵢ →p vⱼ is not a shortest path from vᵢ to vⱼ.
-Then we splice the shortest path p' from vᵢ to vⱼ into
-the path v₀ → vk to get
-
-    v₀ →ᵣ vᵢ →p' vⱼ →q vk
-
-which is a shorter path from v₀ to vk.
-But that contradicts the assumption that
-
-    v₀ →ᵣ vᵢ →p vⱼ →q vk
-
-was a shortest path.
-
-Take away: we can build shortest paths by growing them from smaller
-shortest paths.
-
-Notation: d(u,v) is the weight of the shortest path from u to v.
-
 ##  Negative-weight edges
 
-Motivation: weak, not very common
+Negative weight edges are not very common in applications.
     
 Some shortest-path algorithms handle this (Bellman-ford), some do not
 (Dijkstra, DAG Shortest Paths).
       
-None of them handle graphs with negative-weight cycles, as the notion
-of shortest-path doesn't make sense on such graphs.
+None of the algorithms handle graphs with negative-weight cycles, as
+the notion of shortest-path doesn't make sense on such graphs.
         
 Example:
         
@@ -95,32 +63,6 @@ around the cycle A → D → E → B, which has weight -2.
       
 We can avoid negative weights in some situations by shifting weights up.
 
-
-## Triangle Inequality
-
-For all edges u → v, d(s,v) ≤ d(s,u) + w(u,v).
-
-Proof: s → u → v is a path from s to v, and d(s,v) is the weight of
-the shortest path.
-
-
-## Relaxation
-
-We maintain a current best path length, an upper bound, on the
-distance to a vertex.
-
-We *relax an edge* by updating the distance of the target vertex if
-this edge provides a shorter path to it.
-
-```
-static void relax(Edge e, double[] distance, int[] parent,
-                  Map<Edge,Double> weight) {
-    if (distance[e.target] > distance[e.source] + weight.get(e)) {
-	    distance[e.target] = distance[e.source] + weight.get(e);
-		parent[e.target] = e.source;
-	}
-}
-```
 
 ## Dijkstra Shortest Paths
 
@@ -135,32 +77,76 @@ Growing the shortest paths tree in order of path weight:
 
             W=0   S
 
-            W=1   S-->A
+            W=1   S-1->A
 
 
-            W=2   S-->A-->B
+            W=2   S-1->A-1->B
 
 
-            W=3   S-->A-->B
-                          |
-                          V
-                          E
+            W=3   S-1->A-1->B
+                            |
+                            1
+                            |
+                            V
+                            E
 
-            W=5   S-->A-->B
-                      |   |
-                      V   V
-                      D   E
+            W=5   S-1->A-1->B
+                       |   |
+                       4   1
+                       |   |
+                       V   V
+                       D   E
 
-            W=6   S-->A-->B
-                      |   |
-                      V   V
-                  C<--D   E
+            W=6   S-1->A-1->B
+                       |   |
+                       4   1
+                       |   |
+                       V   V
+                  C<-1-D   E
 
-Dijkstra's solution is to store all the potential next vertices (those
-that are adjacent to the tree) in a priority queue ordered by their
-distance as computed by the current tree plus the weight of the
-lightest edge to that vertex.  Then the minimum of the priority queue
-gives the next shortest path.
+Dijkstra's approach to growing the tree is to store all the potential
+next vertices (those that are adjacent to the tree) in a priority
+queue ordered by the path weight within the current tree plus the
+weight of the lightest edge to that vertex. 
+
+Consider The situation above where the shortest paths tree has grown
+to include paths of weight 3:
+
+            W=3   S-1->A-1->B
+                            |
+                            1
+                            |
+                            V
+                            E
+
+Consider all of the out-edges from nodes in the tree to nodes not yet
+in the tree.
+
+                  S   A
+                 8|   |4
+                  V   V
+                  C   D<-3-E
+
+So the shortest path so far to these vertices is
+
+    C: 8       (S-8->C)
+    D: 5       (S-1->A-4->D)
+
+
+Then the minimum of the priority queue gives the next shortest path,
+in this case, the path to `D`.
+
+            W=5   S-1->A-1->B
+                       |   |
+                       4   1
+                       |   |
+                       V   V
+                       D   E
+
+In the followinng we grow the shortest-paths tree again, but this time
+use the priority queue to keep track of which node to pick for
+expanding the tree.
+
 
                    SPT                  Priority Queue
             W=0    S                    A:1, C:8
@@ -204,3 +190,35 @@ Time Complexity of Dijkstra's Algorithm
  * n pops from the queue: O(n log(n))
  * m `decrease_key` on the queue: O(m log(n))
  * Total: O((n+m) log(n))
+
+## Shortest paths exhibit *optimal substructure*
+
+That is, a subpath of a shortest path is a shortest path.
+
+More precisely, if you have a shortest path
+
+v₀ →ᵣ vᵢ →p vⱼ →q vk
+
+then the subpath p
+
+vᵢ →p vⱼ
+
+is a shortest path from vᵢ to vⱼ.
+
+Proof. Suppose vᵢ →p vⱼ is not a shortest path from vᵢ to vⱼ.
+Then we splice the shortest path p' from vᵢ to vⱼ into
+the path v₀ → vk to get
+
+    v₀ →ᵣ vᵢ →p' vⱼ →q vk
+
+which is a shorter path from v₀ to vk.
+But that contradicts the assumption that
+
+    v₀ →ᵣ vᵢ →p vⱼ →q vk
+
+was a shortest path.
+
+Take away: the optimal substructure property is why we can grow
+shortest paths from smaller shortest paths.
+
+
