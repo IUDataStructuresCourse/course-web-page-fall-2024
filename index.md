@@ -98,7 +98,7 @@ Nov. 1  |                                                           |           
 Nov. 4  | [Graphs and Breadth-first Search](./lectures/graphs-bfs.md) | Ch. 9, sec. 1,3 | Huffman Coding due
 Nov. 6  | [Depth-first Search](./lectures/dfs.md)                   | Ch. 9 sec. 6
 Nov. 8  |                                                           |              | Lab: [Connected Components](./ConnectedComponents.md) (Quiz in Lab)
-Nov. 11 | Shortest Paths                                            | Ch. 9 sec. 3 | Connected Components due
+Nov. 11 | [Shortest Paths](./lectures/shortest-paths.md)            | Ch. 9 sec. 3 | Connected Components due
 Nov. 13 | Union Find                                                | Ch. 8
 Nov. 15 |                                                           |              | Project: [Routing Wires](./RoutingWires)
 Nov. 18 | Minimum Spanning Tree                                     | Ch. 9 sec. 5

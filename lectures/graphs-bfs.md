@@ -253,7 +253,7 @@ Final version of breadth-first search
 
 ## Student group work
 
-Example run of BFS version 2
+Example run of BFS version 2, start at node A.
 
 ![**BFS exercise.**](./digraph4.png)
 
