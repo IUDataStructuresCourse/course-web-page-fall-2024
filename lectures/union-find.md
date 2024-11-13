@@ -6,9 +6,9 @@ representing members of an equivalence relation.
 ## Overview
 
 * Example Applications
+    * minimum spanning trees (next lecture)
     * tracking relatives
-    * Solving equations on trees (unification)
-    * Huet's unification algorithm
+    * Solving equations on trees (Huet's unification algorithm)
 * The Disjoint-Sets ADT
 * Linked-List Implementation
     * basics and time complexity
