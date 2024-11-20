@@ -102,7 +102,7 @@ Nov. 11 | [Shortest Paths](./lectures/shortest-paths.md)            | Ch. 9 sec.
 Nov. 13 | [Union Find](./lectures/union-find.md)                                                | Ch. 8
 Nov. 15 |                                                           |              | Project: [Routing Wires](./RoutingWires)
 Nov. 18 | [Minimum Spanning Tree](./lectures/minimum-spanning-tree.md) | Ch. 9 sec. 5
-Nov. 20 | Dynamic Programming                                       | Ch. 10, sec. 3
+Nov. 20 | [Dynamic Programming](./lectures/dynamic-programming.md)                                       | Ch. 10, sec. 3
 Nov. 22 |                                                           |              | Project: Routing Wires, cont'd
 Nov. 24 - Dec. 1 | **Thanksgiving Break**
 Dec. 2 | DNA Alignment                                              |              | Routing Wires due
