@@ -147,13 +147,14 @@ Return the max of all the choices.
 ## Subproblem identification
 
 Instead of using the entire rest of X and Y as the inputs to the
-recursive function, we can simply use two indices, i and j, to mark
+recursive function, we can simply use two integers, i and j, to mark
 how far into X and Y we currently are, that is, which prefix of X and
 Y correspond to the current subproblem.
 
 ## Memoization 
 
-To memoize the results, we can use a 2D table indexed by i and j.
+To memoize the results, we can use a 2D table indexed by i and j, the
+length of the prefix of X and Y.
 
 	T[0][0] = 0
 	T[0][j] = j * -1      for j = 1...|Y|
