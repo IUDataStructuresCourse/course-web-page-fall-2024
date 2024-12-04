@@ -106,7 +106,7 @@ Nov. 20 | [Dynamic Programming](./lectures/dynamic-programming.md)              
 Nov. 22 |                                                           |              | Project: Routing Wires, cont'd (Quiz in Lab)
 Nov. 24 - Dec. 1 | **Thanksgiving Break**
 Dec. 2 | [DNA Alignment](./lectures/DNA-alignment.md)                                              |              | Routing Wires due
-Dec. 4 | More Dynamic Programming
+Dec. 4 | [More Dynamic Programming](./lectures/more-dynamic-programming.md)
 Dec. 6 |                                                            |              | Lab: [DNA Sequence Alignment](./DnaAlignment.md) | [code](https://autograder.luddy.indiana.edu/web/project/1306), [test](https://autograder.luddy.indiana.edu/web/project/1318)
 Dec. 9 | Code Review (Routing Wires)                                |              | DNA Sequence Alignment due
 Dec. 11 | Review for Final Exam
