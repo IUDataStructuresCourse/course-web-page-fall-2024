@@ -101,12 +101,12 @@ Nov. 8  |                                                           |           
 Nov. 11 | [Shortest Paths](./lectures/shortest-paths.md)            | Ch. 9 sec. 3 | Connected Components due
 Nov. 13 | [Union Find](./lectures/union-find.md)                                                | Ch. 8
 Nov. 15 |                                                           |              | Project: [Routing Wires](./RoutingWires)
-Nov. 18 | Minimum Spanning Tree                                     | Ch. 9 sec. 5
-Nov. 20 | Dynamic Programming                                       | Ch. 10, sec. 3
-Nov. 22 |                                                           |              | Project: Routing Wires, cont'd
+Nov. 18 | [Minimum Spanning Tree](./lectures/minimum-spanning-tree.md) | Ch. 9 sec. 5
+Nov. 20 | [Dynamic Programming](./lectures/dynamic-programming.md)                                       | Ch. 10, sec. 3
+Nov. 22 |                                                           |              | Project: Routing Wires, cont'd (Quiz in Lab)
 Nov. 24 - Dec. 1 | **Thanksgiving Break**
-Dec. 2 | DNA Alignment                                              |              | Routing Wires due
-Dec. 4 | More Dynamic Programming
+Dec. 2 | [DNA Alignment](./lectures/DNA-alignment.md)                                              |              | Routing Wires due
+Dec. 4 | [More Dynamic Programming](./lectures/more-dynamic-programming.md)
 Dec. 6 |                                                            |              | Lab: [DNA Sequence Alignment](./DnaAlignment.md) | [code](https://autograder.luddy.indiana.edu/web/project/1306), [test](https://autograder.luddy.indiana.edu/web/project/1318)
 Dec. 9 | Code Review (Routing Wires)                                |              | DNA Sequence Alignment due
 Dec. 11 | Review for Final Exam
