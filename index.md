@@ -110,7 +110,7 @@ Dec. 4 | More Dynamic Programming
 Dec. 6 |                                                            |              | Lab: [DNA Sequence Alignment](./DnaAlignment.md) | [code](https://autograder.luddy.indiana.edu/web/project/1306), [test](https://autograder.luddy.indiana.edu/web/project/1318)
 Dec. 9 | Code Review (Routing Wires)                                |              | DNA Sequence Alignment due
 Dec. 11 | Review for Final Exam
-Dec. 13 |                                                           |              | no lab
+Dec. 13 |                                                           |              | Optional lab for exam review
 Dec. 18 | **Final Exam** 8-10am
 
 **Resources**
