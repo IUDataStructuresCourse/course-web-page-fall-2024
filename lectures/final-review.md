@@ -2,6 +2,8 @@
 
 ## Topics for Final Exam
 
+* Binary Search Trees
+* AVL Trees
 * Hash tables
 * Heaps, Priority Queues
 * Binomial Queues
@@ -26,6 +28,135 @@
     * Activity Selection
     * Huffman Codes
 	* Fractional Knapsack
+
+## Binary Search Trees
+
+Can implement the Set and Map interfaces.
+
+The **Binary-Search-Tree Property**:
+For every node x in the tree,
+1. if node y is in the left subtree of x, then `y.data < x.data`
+   (or `y.data <= x.data` for MultiSet, that is, allow duplicates), and
+2. if node z is in the right subtree of x, then `x.data < z.data`.
+
+```
+protected Node<K> search(K key, Node<K> curr) {
+	if (curr == null)
+		return null;
+	else if (lessThan.test(key, curr.data))
+		return search(key, curr.left);
+	else if (lessThan.test(curr.data, key))
+		return search(key, curr.right);
+	else
+		return curr;
+}
+```
+
+### `remove`  method of `BinarySearchTree`
+
+Search for the node x with the key to remove.
+Then consider the following cases.
+
+* Case 1: no left child
+
+```
+          |              |
+          x              A
+           \       ==>
+            A
+```
+
+* Case 2: no right child
+
+```
+            |            |
+            x            A
+           /       ==>
+          A
+```
+
+* Case 3: two children
+
+```
+             |
+             x
+            / \
+           A   B
+```
+
+Replace x with the node after x wrt. in-order traversal, which is the
+`first` node y of the subtree B. We then remove y from B.
+
+
+## AVL Trees
+
+Goal: maintain balance in a binary search tree. 
+
+Definition The **AVL Invariant** is that the height of two child
+subtrees may only differ by 1, for every node in the tree.
+
+After inserting a node, move up the tree rebalancing as needed
+using tree rotations.
+
+### Tree Rotation
+
+                    y                         x
+                   / \    right_rotate(y)    / \
+                  x   C  --------------->   A   y
+                 / \     <-------------        / \
+                A   B     left_rotate(x)      B   C
+
+### Rebalancing Algorithm
+
+If node x is the lowest node that is not AVL, do the following to
+rebalance it.
+
+    1. if height(x.right.left) ≤ height(x.right.right)
+
+        let k = height(x.right.right)
+
+                    x k+2                                y ≤k+2
+                   / \          left_rotate(x)          / \
+               ≤k A   y k+1     ===============>  ≤k+1 x   C k
+                     / \                              / \
+                 ≤k B   C k                       ≤k A   B ≤k
+
+    2. if height(x.right.left) > height(x.right.right)
+
+        let k = height(x.right.left)
+
+              k+2 x                               y k+1
+                 / \                            /   \
+            k-1 A   z k+1    R(z), L(x)      k x     z k
+                   / \      =============>    / \   / \
+                k y   D k-1              k-1 A   B C   D k-1
+                 / \
+                B   C <k
+
+* if height(x.left) > height(x.right)
+
+    1. if height(x.left.left) < height(x.left.right)  (note: strictly less!)
+
+        let k = height(x.left.right)
+
+                    x k+2                                 z k+1
+                   / \                                  /   \
+              k+1 y   D k-1      L(y), R(x)          k y     x k
+                 / \            =============>        / \   / \
+            k-1 A   z k                              A   B C   D    <k
+                   / \
+                  B   C <k
+
+    2. if height(x.left.left) ≥ height(x.left.right)  (note: greater-equal!)
+
+        let k = height(l.left.left)
+
+                  x k+2                                  y k+1
+                 / \         right_rotate(x)            / \
+            k+1 y   C k-1    ===============>        k A   x k+1
+               / \                                        / \
+            k A   B ≤k                                ≤k B   C k-1
+
 
 ## Hash tables
 
