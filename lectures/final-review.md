@@ -7,11 +7,6 @@
 * Hash tables
 * Heaps, Priority Queues
 * Binomial Queues
-* Sorting
-    * quicksort, partition
-    * counting sort
-    * radix sort
-	* bucket sort
 * Graphs
     * Adjacency List, Adjacency Matrix
     * BFS, DFS
@@ -19,15 +14,11 @@
     * Connected Components
     * Minimum Spanning Trees: Kruskal's
 * Union-find (aka. Disjoint Sets)
-* Backtracking
 * Dynamic Programming
     * Rod cutting
     * DNA Sequence Alignment
 	* 0-1 Knapsack
-* Greedy Algorithms
-    * Activity Selection
-    * Huffman Codes
-	* Fractional Knapsack
+
 
 ## Binary Search Trees
 

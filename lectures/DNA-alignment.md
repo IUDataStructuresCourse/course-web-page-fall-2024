@@ -18,7 +18,7 @@ have as many matching characters across from each other as
 possible. We can insert **gaps** (written as underscores) in either
 sequence to try to help them line up.
 
-The similarity of two X and Y strands is the `score` of the best
+The similarity of two S and T strands is the `score` of the best
 alignment. The score is computed as follows, using an auxiliary
 function called `match` to process the score for individual
 characters.
@@ -33,10 +33,10 @@ characters.
 		}
 	}
 
-	static int score(char[] X, char[] Y) {
+	static int score(char[] S, char[] T) {
 		int total = 0;
-		for (int i = 0; i != X.length; ++i) {
-			total += match(X[i], Y[i]);
+		for (int i = 0; i != S.length; ++i) {
+			total += match(S[i], T[i]);
 		}
 		return total;
 	}
@@ -109,73 +109,73 @@ alignment:
 
 	Inputs:
 
-		X = GAATTCAGTTA
-		Y = GGATCGA
+		S = GAATTCAGTTA
+		T = GGATCGA
 
 	Partial Output:
 
-		A     rest of X = GAATTCAGTT
+		A     rest of S = GAATTCAGTT
 		|
-		A     rest of Y = GGATCG
+		A     rest of T = GGATCG
 
-2. Take a character from the end of X and put a gap on the other side.
-   We call this choice a **deletion** because, to get from X to Y,
+2. Take a character from the end of S and put a gap on the other side.
+   We call this choice a **deletion** because, to get from S to T,
    we deleted a character.
 
 	Partial Output:
 
-		A     rest of X = GAATTCAGTT
+		A     rest of S = GAATTCAGTT
 
-		_     rest of Y = GGATCGA
+		_     rest of T = GGATCGA
 
 3. Insert a gap in the first string and take a character from
-   the end of Y.  We call this choice an **insertion** because,
-   to get from X to Y, we inserted a character.
+   the end of T.  We call this choice an **insertion** because,
+   to get from S to T, we inserted a character.
 
 	Partial Output:
 
-		_     rest of X = GAATTCAGTTA
+		_     rest of S = GAATTCAGTTA
 
-		A     rest of Y = GGATCG
+		A     rest of T = GGATCG
 
 
-For each choice, recursively process the rest of X and Y, finding the
+For each choice, recursively process the rest of S and T, finding the
 score for the rest, then add in the score for the current choice.
 
 Return the max of all the choices.
 
 ## Subproblem identification
 
-Instead of using the entire rest of X and Y as the inputs to the
+Instead of using the entire rest of S and T as the inputs to the
 recursive function, we can simply use two integers, i and j, to mark
-how far into X and Y we currently are, that is, which prefix of X and
-Y correspond to the current subproblem.
+how far into S and T we currently are, that is, which prefix of S and
+T correspond to the current subproblem.
 
 ## Memoization 
 
 To memoize the results, we can use a 2D table indexed by i and j, the
-length of the prefix of X and Y.
+length of the prefix of S and T.
 
 	T[0][0] = 0
-	T[0][j] = j * -1      for j = 1...|Y|
-	T[i][0] = i * -1      for i = 1...|X|
-	T[i][j] = max(M,I,D)  for j = 1...|Y| and i = 1...|X|
+	T[0][j] = j * -1      for j = 1...|T|
+	T[i][0] = i * -1      for i = 1...|S|
+	T[i][j] = max(M,I,D)  for j = 1...|T| and i = 1...|S|
 			  where
-			  M = score(X[i-1], Y[j-1]) + T[i-1][j-1]   // M for match/mismatch
+			  M = score(S[i-1], T[j-1]) + T[i-1][j-1]   // M for match/mismatch
 			  I = T[i][j-1] - 1                         // I for insert
 			  D = T[i-1][j] - 1                         // D for delete
 
     Example:
 
-          Y =            G     G     A
+          T =            G     G     A
           j =      0  |  1  |  2  |  3
               --------------------------
-        X i = 0 |  0  |I:-1 |I:-2 |I: -3
+        S i = 0 |  0  |I:-1 |I:-2 |I: -3
           G   1 |D:-1 |M:2  |M:1
           A   2 |D:-2 |D:1  |
           A   3 |D:-3 | 
 
-    Evaluating the 3 options for each cell in the table (each prefix of X and Y)
+    Evaluating the 3 options for each cell in the table (each prefix of S and T)
 	i=1, j=1  (align "G" and "G")
 	  M=+2+0=+2  (diagonal NW) *** winner! ***
 	  I=-1-1=-2  (left)
@@ -194,19 +194,19 @@ length of the prefix of X and Y.
 
     Complete Solution:
 
-          Y =            G     G     A
+          T =            G     G     A
           j =      0  |  1  |  2  |  3
               --------------------------
-        X i = 0 |  0  |I:-1 |I:-2 |I:-3
+        S i = 0 |  0  |I:-1 |I:-2 |I:-3
           G   1 |D:-1 |M:2  |M:1  |I:0
           A   2 |D:-2 |D:1  |M:0  |M:3
           A   3 |D:-3 |D:0  |I:-1 |D:2
 
     The alignment:
 
-        X= _GAA
+        S= _GAA
             ||
-        Y= GGA_
+        T= GGA_
            *++*
 
     score = 2
@@ -215,12 +215,12 @@ length of the prefix of X and Y.
 
     Input:
 
-        X = CAG
-        Y = TCAT
+        S = CAG
+        T = TCAT
 
-             Y =       T     C     A     T
+             T =       T     C     A     T
              j = 0  |  1  |  2  |  3  |  4
-        X i=0 ------------------------------
+        S i=0 ------------------------------
               |  0  |  -1 |  -2 |  -3 |  -4 
           C   | -1  |  -2 |  1  |  0  |  -1 
           A   | -2  |  -3 |  0  |  3  |  2
